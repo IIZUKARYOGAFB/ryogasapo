@@ -1,0 +1,1856 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>りょがサポ | KO1KEYZ 飯塚亮賀 ファンサポート</title>
+<meta name="description" content="KO1KEYZ・飯塚亮賀くんを応援する有志ファンダム「りょがサポ」の情報サイト。スケジュール、センイル投票、音楽番組の集票、応援広告の記録をまとめています。">
+<meta name="theme-color" content="#F3F5FE">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="RYOGA SUPPORT — りょがサポ">
+<meta property="og:title" content="りょがサポ | KO1KEYZ 飯塚亮賀 ファンサポート">
+<meta property="og:description" content="KO1KEYZ・飯塚亮賀くんを応援する有志ファンダムの情報ハブ。スケジュール、センイル投票、音楽番組の集票、応援広告の記録。">
+<!-- ▼ OGP画像: 公開後は content を絶対URL（例 https://ユーザー名.github.io/リポジトリ名/assets/ogp.jpg）に差し替えること。相対URLだとX等でカードが出ない場合があります -->
+<meta property="og:image" content="../assets/ogp.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23FFD84D'/%3E%3Ctext x='32' y='43' font-family='Verdana,sans-serif' font-size='30' font-weight='bold' text-anchor='middle' fill='%23121C42'%3ER%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://use.typekit.net" crossorigin>
+<!-- Adobe Fonts（運営者発行キット yoo6wko / ダッシュボード提供のJS埋め込みコードをそのまま使用。書き換えない） -->
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'yoo6wko',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Instrument+Serif:ital@0;1&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+<script>
+/* イントロ演出は1セッション1回だけ（2回目以降はスキップ） */
+try{
+  if(sessionStorage.getItem('rs-intro')){document.documentElement.classList.add('skip-intro');}
+  else{sessionStorage.setItem('rs-intro','1');}
+}catch(e){}
+</script>
+<style>
+/* ============================================================
+   RYOGA SUPPORT — grain-sky v3 (sticker & antique build)
+   palette: mist #F3F5FE / sky #9FB0F6 / cobalt #3A4FD0
+            ink #121C42 / spark #FFD84D
+   type   : EN display = Obviously (Wide) / EN label = Neue Haas Grotesk
+            JP見出し = FOT-筑紫B丸ゴシック / JP本文 = Zen Kaku Gothic New
+   ============================================================ */
+:root{
+  --mist:#F3F5FE;
+  --sky:#9FB0F6;
+  --sky-soft:#D6DDFC;
+  --sky-deep:#7D8FEF;
+  --cobalt:#3A4FD0;
+  --ink:#121C42;
+  --ink-soft:#4E5A88;
+  --spark:#FFD84D;
+  --paper:#FFFFFF;
+  --line:rgba(18,28,66,.12);
+  --line-soft:rgba(18,28,66,.07);
+  --wline:rgba(255,255,255,.14);
+  --r-l:24px;
+  --r-m:16px;
+  --r-s:10px;
+  --font-en:"neue-haas-grotesk-display","Bricolage Grotesque",sans-serif;
+  --font-pop:"obviously","Bricolage Grotesque",sans-serif;
+  --font-popw:"obviously-wide","obviously","Bricolage Grotesque",sans-serif;
+  --font-serif:"Instrument Serif",serif;
+  --font-disp:"fot-tsukubrdgothic-std","Zen Maru Gothic","Zen Kaku Gothic New",sans-serif;
+  --font-jp:"Zen Kaku Gothic New",sans-serif;
+  --ease-out:cubic-bezier(.22,1,.36,1);
+  --ease-sweep:cubic-bezier(.72,0,.18,1);
+  --introd:.55s;
+  /* 波線アンダーライン（コバルト／スカイ） */
+  --wavy:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='7' viewBox='0 0 20 7'%3E%3Cpath d='M0 5 Q 2.5 1.5 5 5 T 10 5 T 15 5 T 20 5' fill='none' stroke='%233A4FD0' stroke-width='1.7' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+html.skip-intro{--introd:.05s}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{
+  font-family:var(--font-jp);
+  color:var(--ink);
+  background:var(--mist);
+  line-height:1.95;
+  font-size:14.5px;
+  letter-spacing:.03em;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+/* grain overlay */
+body::after{
+  content:"";position:fixed;inset:0;z-index:2000;pointer-events:none;
+  opacity:.35;mix-blend-mode:soft-light;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+::selection{background:var(--sky);color:var(--ink)}
+:focus-visible{outline:3px solid var(--cobalt);outline-offset:3px;border-radius:4px}
+
+.en{font-family:var(--font-en)}
+.serif-i{font-family:var(--font-serif);font-style:italic;font-weight:400}
+.wrap{width:min(1180px,92%);margin-inline:auto}
+/* ロゴロックアップ（RYOGA大＋SUPPORTトラッキング小の縦積み） */
+.lg-top{display:block;font-family:var(--font-popw);font-weight:700;letter-spacing:.02em;line-height:1}
+.lg-sub{display:block;font-family:var(--font-en);font-weight:700;letter-spacing:.95em;line-height:1;text-transform:uppercase}
+/* マーカー（黄色微量ルール: ページ2箇所まで） */
+.mk{background:linear-gradient(transparent 60%, rgba(255,216,77,.62) 60%, rgba(255,216,77,.62) 94%, transparent 94%);padding:0 2px}
+/* 十字マーク */
+.xm{
+  position:absolute;z-index:3;
+  font-family:var(--font-en);font-weight:300;font-size:16px;line-height:1;
+  color:var(--cobalt);user-select:none;pointer-events:none;
+}
+.xm.tl{top:-9px;left:-8px}
+.xm.tr{top:-9px;right:-8px}
+.xm.bl{bottom:-9px;left:-8px}
+.xm.br{bottom:-9px;right:-8px}
+
+/* skip link */
+.skip{
+  position:fixed;left:14px;top:14px;z-index:4000;
+  background:var(--ink);color:#fff;font-weight:700;font-size:12px;
+  padding:10px 18px;border-radius:999px;
+  transform:translateY(-300%);transition:transform .3s;
+}
+.skip:focus{transform:none}
+
+/* ============ intro ============ */
+.intro{
+  position:fixed;inset:0;z-index:3000;pointer-events:none;
+  display:grid;place-items:center;
+  background:linear-gradient(175deg,#FFFFFF 0%,#ECF0FE 55%,#D6DDFC 100%);
+  animation:introOut .6s var(--ease-sweep) 1.15s both;
+}
+.intro-in{overflow:hidden;text-align:center}
+.intro-mark{
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+  animation:rise .8s var(--ease-out) .1s both;
+}
+.intro-mark .lg-top{font-size:clamp(26px,3.6vw,36px);color:var(--ink)}
+.intro-mark .lg-sub{font-size:clamp(10px,1.3vw,12px);color:var(--cobalt);padding-left:.95em}
+.intro-jp{
+  display:block;font-family:var(--font-disp);font-size:11px;letter-spacing:.4em;color:var(--ink-soft);
+  margin-top:10px;animation:rise .8s var(--ease-out) .22s both;
+}
+@keyframes introOut{to{transform:translateY(-101%);visibility:hidden}}
+@keyframes rise{from{transform:translateY(115%);opacity:.001}}
+html.skip-intro .intro{display:none}
+
+/* ============ custom cursor ============ */
+.cur-dot,.cur-ring{display:none}
+@media (pointer:fine){
+  .cur-dot,.cur-ring{
+    display:block;position:fixed;left:0;top:0;z-index:2500;pointer-events:none;
+    border-radius:50%;will-change:transform;opacity:0;transition:opacity .3s;
+  }
+  .cur-dot.live,.cur-ring.live{opacity:1}
+  .cur-dot{width:6px;height:6px;background:var(--cobalt)}
+  .cur-ring{
+    width:34px;height:34px;border:1.5px solid rgba(58,79,208,.45);
+    transition:width .25s,height .25s,background-color .25s,border-color .25s,opacity .25s;
+  }
+  .cur-ring.on{width:54px;height:54px;background:rgba(159,176,246,.16);border-color:rgba(58,79,208,.85)}
+}
+
+/* ---------- buttons / links（ステッカー式） ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  font-weight:700;font-size:13.5px;letter-spacing:.04em;
+  color:var(--ink);background:#fff;
+  border:1.5px solid var(--ink);border-radius:999px;
+  padding:14px 26px;
+  box-shadow:4px 4px 0 var(--sky-deep);
+  transition:translate .16s ease,box-shadow .16s ease,background .25s,color .25s,border-color .25s;
+}
+.btn svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s}
+.btn:hover{translate:-2px -2px;box-shadow:6px 6px 0 var(--cobalt)}
+.btn:hover svg{transform:translateX(3px)}
+.btn:active{translate:2px 2px;box-shadow:0 0 0 var(--cobalt)}
+.btn-primary{background:var(--ink);color:#fff}
+.btn-primary:hover{background:var(--cobalt);border-color:var(--cobalt);box-shadow:6px 6px 0 var(--sky-deep)}
+
+.tlink{
+  display:inline-flex;align-items:center;gap:8px;
+  font-weight:700;font-size:13.5px;color:var(--ink);
+  padding:12px 2px 10px;
+  background-image:var(--wavy);
+  background-repeat:repeat-x;background-position:left bottom;background-size:20px 7px;
+  transition:color .3s;
+}
+.tlink svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;transition:transform .3s}
+.tlink:hover{color:var(--cobalt);animation:wavemarch .5s linear infinite}
+.tlink:hover svg{transform:translateX(4px)}
+@keyframes wavemarch{to{background-position-x:20px}}
+
+.circ{
+  width:38px;height:38px;border-radius:50%;flex-shrink:0;
+  border:1.5px solid var(--ink);background:#fff;
+  box-shadow:2.5px 2.5px 0 rgba(125,143,239,.6);
+  display:grid;place-items:center;
+  transition:background .3s,border-color .3s,translate .16s,box-shadow .16s;
+}
+.circ svg{width:14px;height:14px;stroke:var(--ink);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:stroke .3s,transform .35s}
+
+/* ---------- header ---------- */
+.header{
+  position:fixed;top:14px;left:50%;transform:translateX(-50%);
+  width:min(1180px,94%);z-index:1000;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:9px 9px 9px 22px;
+  background:rgba(255,255,255,.72);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border:1.5px solid rgba(18,28,66,.9);
+  border-radius:999px;
+  box-shadow:4px 4px 0 rgba(159,176,246,.45);
+}
+.logo{display:flex;flex-direction:column;gap:5px}
+.logo .lg-top{font-size:22px;color:var(--ink)}
+.logo .lg-sub{font-size:10px;color:var(--cobalt);padding-left:2px}
+.gnav{display:flex;align-items:center;gap:2px}
+.gnav a:not(.nav-x){
+  position:relative;
+  font-family:var(--font-en);font-weight:600;font-size:12.5px;letter-spacing:.05em;
+  padding:9px 13px;border-radius:999px;
+  transition:background .25s,color .25s;
+}
+.gnav a:not(.nav-x):hover,
+.gnav a:not(.nav-x).cur{background:var(--sky-soft)}
+.gnav .rl{display:block;overflow:hidden;line-height:1.4}
+.gnav .rt{position:relative;display:block;transition:transform .4s var(--ease-sweep)}
+.gnav .rt::after{content:attr(data-l);position:absolute;left:0;top:100%;color:var(--cobalt)}
+.gnav a:not(.nav-x):hover .rt{transform:translateY(-100%)}
+.gnav .nav-x{
+  font-family:var(--font-en);font-weight:700;font-size:12.5px;letter-spacing:.05em;
+  background:var(--ink);color:#fff;border-radius:999px;border:1.5px solid var(--ink);
+  display:inline-flex;align-items:center;gap:7px;
+  padding:8px 16px;margin-left:8px;
+  box-shadow:2.5px 2.5px 0 rgba(125,143,239,.7);
+  transition:background .25s,translate .16s,box-shadow .16s;
+}
+.gnav .nav-x:hover{background:var(--cobalt);border-color:var(--cobalt);translate:-1px -1px;box-shadow:4px 4px 0 rgba(125,143,239,.7)}
+.gnav .nav-x svg{width:11px;height:11px;fill:currentColor}
+.menu-btn{
+  display:none;position:relative;z-index:1200;
+  width:42px;height:42px;border-radius:50%;
+  background:var(--ink);
+}
+.menu-btn span{
+  position:absolute;left:13px;right:13px;height:1.8px;background:#fff;border-radius:2px;
+  transition:transform .35s,top .35s;
+}
+.menu-btn span:nth-child(1){top:17px}
+.menu-btn span:nth-child(2){top:23px}
+body.menu-open .menu-btn span:nth-child(1){top:20px;transform:rotate(45deg)}
+body.menu-open .menu-btn span:nth-child(2){top:20px;transform:rotate(-45deg)}
+/* mobile sheet */
+.sheet{
+  position:fixed;inset:0;z-index:900;
+  background:linear-gradient(175deg,#FFFFFF 0%,#ECF0FE 60%,#D6DDFC 100%);
+  padding:110px 8% 40px;
+  display:flex;flex-direction:column;
+  opacity:0;pointer-events:none;transition:opacity .35s;
+}
+body.menu-open .sheet{opacity:1;pointer-events:auto}
+body.menu-open{overflow:hidden}
+.sheet-nav{display:flex;flex-direction:column}
+.sheet-nav a{
+  display:flex;align-items:baseline;gap:16px;
+  padding:16px 4px;border-bottom:1px solid var(--line);
+  opacity:0;transform:translateY(16px);
+  transition:opacity .5s var(--ease-out),transform .5s var(--ease-out);
+}
+body.menu-open .sheet-nav a{opacity:1;transform:none}
+body.menu-open .sheet-nav a:nth-child(1){transition-delay:.05s}
+body.menu-open .sheet-nav a:nth-child(2){transition-delay:.1s}
+body.menu-open .sheet-nav a:nth-child(3){transition-delay:.15s}
+body.menu-open .sheet-nav a:nth-child(4){transition-delay:.2s}
+body.menu-open .sheet-nav a:nth-child(5){transition-delay:.25s}
+body.menu-open .sheet-nav a:nth-child(6){transition-delay:.3s}
+.sheet-nav a .no{font-family:var(--font-en);font-weight:600;font-size:11px;color:var(--cobalt);letter-spacing:.1em}
+.sheet-nav a .t{font-family:var(--font-disp);font-weight:700;font-size:19px;letter-spacing:.04em;font-feature-settings:"palt" 1}
+.sheet-nav a .e{font-family:var(--font-serif);font-style:italic;font-size:14px;color:var(--ink-soft);margin-left:auto}
+.sheet-x{
+  margin-top:auto;display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--font-en);font-weight:700;font-size:13px;letter-spacing:.08em;
+  color:#fff;background:var(--ink);border-radius:999px;border:1.5px solid var(--ink);
+  padding:15px 24px;align-self:flex-start;
+  box-shadow:4px 4px 0 rgba(125,143,239,.7);
+}
+.sheet-x svg{width:13px;height:13px;fill:currentColor}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;
+  min-height:100svh;
+  display:flex;flex-direction:column;
+  padding-top:112px;
+  background:linear-gradient(180deg,#FFFFFF 0%,#F3F5FE 52%,#DCE2FD 100%);
+  overflow:hidden;
+}
+.hero .blob{position:absolute;z-index:0;border-radius:50%;filter:blur(70px);pointer-events:none}
+.hero .b1{
+  width:560px;height:560px;left:-9%;top:-14%;opacity:.9;
+  background:radial-gradient(circle at 35% 35%, #DFE4FE, rgba(221,239,254,0) 70%);
+  animation:drift1 17s ease-in-out infinite alternate;
+}
+.hero .b2{
+  width:640px;height:640px;right:-11%;bottom:-20%;opacity:.75;
+  background:radial-gradient(circle at 60% 40%, rgba(159,176,246,.85), rgba(159,176,246,0) 72%);
+  animation:drift2 21s ease-in-out infinite alternate;
+}
+@keyframes drift1{to{transform:translate(70px,44px) scale(1.07)}}
+@keyframes drift2{to{transform:translate(-80px,-34px)}}
+.hero::before{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background-image:radial-gradient(rgba(58,79,208,.14) 1px,transparent 1.4px);
+  background-size:26px 26px;
+  mask-image:linear-gradient(to bottom,rgba(0,0,0,.8),transparent 72%);
+  -webkit-mask-image:linear-gradient(to bottom,rgba(0,0,0,.8),transparent 72%);
+}
+.hero-main{
+  flex:1;position:relative;z-index:2;
+  display:grid;grid-template-columns:1.06fr .94fr;
+  align-items:end;gap:0;
+  padding-block:24px 0;
+}
+.hero-copy{position:relative;padding-bottom:64px}
+.hero-label{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--font-en);font-weight:700;font-size:11px;letter-spacing:.26em;
+  color:var(--cobalt);margin-bottom:24px;
+  animation:fadeup .8s var(--ease-out) calc(var(--introd) + .05s) both;
+}
+.hero-label::before{content:"";width:30px;height:1.5px;background:var(--cobalt)}
+.hero-label .pulse{width:7px;height:7px;border-radius:50%;background:var(--cobalt);animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.8);opacity:.35}}
+/* FVタイトル＝ヘッダーロゴのロックアップを巨大化したもの。装飾（袋文字・ベタ影）は付けない */
+.hero-title{font-family:var(--font-popw);font-weight:700;line-height:1;letter-spacing:.02em;font-size:clamp(64px,10.2vw,148px)}
+.clip{display:block;overflow:hidden;padding-bottom:.06em;margin-bottom:-.06em}
+.clip>span{display:block;animation:rise 1s var(--ease-out) both}
+.clip.c2>span{animation-delay:calc(var(--introd) + .12s)}
+.clip.c3>span{animation-delay:calc(var(--introd) + .24s)}
+.clip.c2{position:relative;z-index:1}
+.clip.c3{position:relative;z-index:1}
+/* RYOGAは白抜き＋コバルトフチ（写真のネクタイ等の暗部に重なっても読めるように） */
+.hero-title .t1{
+  display:block;font-size:1em;
+  color:#fff;
+  -webkit-text-stroke:.042em var(--cobalt);
+  paint-order:stroke;
+  text-shadow:0 .05em .45em rgba(58,79,208,.28);
+}
+@supports not (paint-order:stroke){
+  .hero-title .t1{-webkit-text-stroke:.028em var(--cobalt)}
+}
+.hero-title .t2{
+  display:block;
+  font-family:var(--font-en);font-size:.45em;
+  letter-spacing:.95em;text-transform:uppercase;
+  color:var(--cobalt);
+  margin:.15em 0 0 .05em;
+}
+.hero-lead{
+  position:relative;z-index:3;
+  margin-top:30px;max-width:430px;
+  font-size:14.5px;font-weight:500;color:var(--ink-soft);
+  animation:fadeup .9s var(--ease-out) calc(var(--introd) + .5s) both;
+}
+.hero-lead strong{color:var(--ink);font-weight:700}
+.hero-cta{
+  position:relative;z-index:3;
+  display:flex;flex-wrap:wrap;align-items:center;gap:12px 26px;margin-top:32px;
+  animation:fadeup .9s var(--ease-out) calc(var(--introd) + .6s) both;
+}
+.hero-chips{
+  position:relative;z-index:3;
+  display:flex;flex-wrap:wrap;gap:10px;margin-top:36px;
+  animation:fadeup .9s var(--ease-out) calc(var(--introd) + .7s) both;
+}
+@keyframes fadeup{from{opacity:0;transform:translateY(16px)}}
+.chip{
+  display:inline-flex;align-items:center;gap:7px;
+  font-family:var(--font-en);font-weight:700;font-size:10px;letter-spacing:.14em;
+  color:var(--ink);
+  border:1.5px solid var(--ink);border-radius:999px;
+  padding:6px 13px;background:#fff;
+  box-shadow:2px 2px 0 rgba(125,143,239,.65);
+}
+.hero-chips .chip:nth-child(1){rotate:-2deg}
+.hero-chips .chip:nth-child(2){rotate:1.6deg}
+.hero-chips .chip:nth-child(3){rotate:-1.2deg}
+.chip svg{width:10px;height:10px;fill:var(--ink)}
+a.chip{transition:background .25s,color .25s,translate .16s,box-shadow .16s}
+a.chip:hover{color:var(--cobalt);background:#fff;translate:-1px -1px;box-shadow:3.5px 3.5px 0 rgba(125,143,239,.8)}
+/* KO1KEYZ公式ロゴのステッカーチップ */
+.chip-logo{padding:8px 14px}
+.chip-logo img{height:11px;width:auto;display:block}
+.hero-chips .chip:nth-child(4){rotate:1.2deg}
+
+/* 鍵ピン（エナメルバッジ風） */
+.key-fab{
+  position:absolute;z-index:4;right:-20px;top:34%;
+  width:46px;height:46px;border-radius:50%;
+  background:#fff;border:1.5px solid var(--ink);
+  display:grid;place-items:center;rotate:9deg;
+  box-shadow:3px 3px 0 rgba(125,143,239,.75);
+  animation:fadeup .8s var(--ease-out) calc(var(--introd) + 1.1s) both;
+}
+.key-fab svg{width:22px;height:22px;stroke:var(--ink);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+/* サッカーボールピン（インタールードの足元） */
+.ball-fab{
+  position:absolute;z-index:6;left:2px;bottom:-8px;
+  width:46px;height:46px;border-radius:50%;
+  background:#fff;border:1.5px solid var(--ink);
+  display:grid;place-items:center;rotate:-8deg;
+  box-shadow:3px 3px 0 rgba(58,79,208,.5);
+}
+.ball-fab svg{width:26px;height:26px;stroke:var(--ink);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.ball-fab svg circle{fill:none}
+.ball-fab svg .pent{fill:var(--ink);stroke:none}
+/* チッカー内の鍵アイコン */
+.tk-ic{
+  width:14px;height:14px;display:inline-block;vertical-align:-2px;margin:0 2px;
+  stroke:var(--cobalt);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;
+}
+/* スタンプ中心の鍵穴 */
+.stamp .hole{fill:var(--ink)}
+
+/* 切り抜き写真＋文字サンド */
+.hero-visual{
+  position:relative;z-index:2;align-self:end;justify-self:center;
+  margin-left:-70px;
+}
+.hero-visual .halo{
+  position:absolute;z-index:-1;left:50%;top:4%;transform:translateX(-50%);
+  width:min(500px,96%);aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle at 50% 42%, rgba(214,221,252,.95), rgba(214,221,252,0) 70%);
+}
+.hero-visual .ghost{
+  position:absolute;z-index:-1;right:-10%;top:-13%;
+  font-size:clamp(90px,11vw,180px);line-height:1;
+  color:rgba(58,79,208,.1);
+  pointer-events:none;user-select:none;
+}
+.hero-visual .cut{
+  width:min(520px,100%);
+  filter:drop-shadow(0 30px 46px rgba(58,79,208,.30));
+  animation:archin 1.2s var(--ease-out) calc(var(--introd) + .35s) both;
+  margin-bottom:-6px;
+}
+@keyframes archin{from{opacity:0;transform:translateY(30px) scale(.97)}}
+.hero-visual .ph-caption{
+  position:absolute;right:-30px;top:22%;
+  writing-mode:vertical-rl;
+  font-family:var(--font-en);font-weight:600;font-size:9.5px;letter-spacing:.32em;
+  color:var(--ink-soft);
+  animation:fadeup .8s var(--ease-out) calc(var(--introd) + .9s) both;
+}
+.stamp-wrap{
+  position:absolute;z-index:4;left:-26px;bottom:120px;
+  width:122px;height:122px;
+  filter:drop-shadow(0 10px 24px rgba(18,28,66,.18));
+  animation:stampin .7s var(--ease-out) calc(var(--introd) + 1s) both;
+}
+@keyframes stampin{from{opacity:0;transform:scale(.55) rotate(-40deg)}}
+.stamp{width:100%;height:100%;animation:spin 22s linear infinite}
+.stamp text{font-family:var(--font-en);font-weight:700;font-size:10.4px;letter-spacing:.26em;fill:var(--ink)}
+.stamp .core{fill:var(--spark)}
+.stamp .ring{fill:none;stroke:var(--ink);stroke-width:1}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.hero-side{
+  position:absolute;right:22px;top:44%;transform:translateY(-50%);z-index:3;
+  writing-mode:vertical-rl;
+  font-family:var(--font-disp);
+  font-size:11.5px;letter-spacing:.42em;color:var(--ink-soft);
+  display:flex;align-items:center;gap:14px;
+}
+.hero-side::after{content:"";width:1px;height:74px;background:var(--line)}
+.hud{
+  position:absolute;right:26px;top:88px;z-index:3;
+  font-family:var(--font-en);font-weight:600;font-size:9.5px;letter-spacing:.22em;
+  color:var(--ink-soft);
+  display:flex;align-items:center;gap:8px;
+  font-variant-numeric:tabular-nums;
+  animation:fadeup .8s var(--ease-out) calc(var(--introd) + .9s) both;
+}
+.hud::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--cobalt)}
+.scroll-cue{
+  position:absolute;left:26px;bottom:24px;z-index:3;
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+}
+.scroll-cue .txt{
+  writing-mode:vertical-rl;
+  font-family:var(--font-en);font-weight:600;font-size:9px;letter-spacing:.34em;color:var(--ink-soft);
+}
+.scroll-cue .bar{width:1px;height:44px;background:var(--ink-soft);overflow:hidden;position:relative}
+.scroll-cue .bar::after{content:"";position:absolute;left:0;top:-100%;width:100%;height:100%;background:var(--cobalt);animation:drip 2.2s ease-in-out infinite}
+@keyframes drip{0%{top:-100%}55%,100%{top:100%}}
+
+@media (min-width:1241px){
+  .hero-visual{margin-left:-230px}
+  .hero-visual .cut{width:min(570px,100%)}
+}
+
+/* ---------- ticker（ヒーロー側は少し傾ける） ---------- */
+.ticker{
+  border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);
+  background:#fff;
+  overflow:hidden;white-space:nowrap;
+  padding:12px 0;position:relative;z-index:3;
+}
+.ticker.tilt{
+  rotate:-1.2deg;width:104vw;margin-left:-2vw;margin-top:-6px;
+}
+.ticker-track{display:inline-block;animation:ticker 30s linear infinite}
+.ticker.rev .ticker-track{animation-direction:reverse}
+.ticker span{
+  font-family:var(--font-pop);font-weight:700;font-size:12.5px;letter-spacing:.12em;
+  margin-right:52px;color:var(--ink);
+}
+.ticker span i{font-family:var(--font-serif);font-style:italic;font-weight:400;font-size:15px;letter-spacing:.03em;color:var(--cobalt)}
+.ticker .star{color:var(--sky-deep)}
+@keyframes ticker{to{transform:translateX(-50%)}}
+
+/* ---------- section base ---------- */
+.section{position:relative;padding:96px 0}
+.sec-head{position:relative;margin-bottom:52px}
+.sec-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--font-en);font-weight:700;font-size:10.5px;letter-spacing:.18em;
+  color:var(--ink);background:#fff;
+  border:1.5px solid var(--ink);border-radius:999px;
+  padding:7px 15px;rotate:-2deg;
+  box-shadow:3px 3px 0 rgba(159,176,246,.8);
+  margin-bottom:20px;
+}
+.sec-eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--cobalt)}
+.sec-title{
+  font-family:var(--font-disp);font-weight:700;
+  font-size:clamp(34px,5.4vw,54px);
+  line-height:1.24;letter-spacing:.04em;
+  font-feature-settings:"palt" 1;
+}
+.sec-title em{font-style:normal;color:var(--cobalt)}
+.sec-title .sec-en{
+  display:block;
+  font-family:var(--font-en);font-style:normal;font-weight:700;
+  font-size:10.5px;letter-spacing:.38em;text-transform:uppercase;
+  color:var(--cobalt);
+  margin:14px 0 0 3px;
+}
+.sec-sub{margin-top:14px;font-size:13.5px;color:var(--ink-soft);max-width:600px}
+.sec-ghost{
+  position:absolute;right:-6px;top:-58px;z-index:0;
+  font-family:var(--font-pop);font-weight:700;
+  font-size:clamp(90px,12vw,168px);line-height:1;letter-spacing:-.02em;
+  color:transparent;-webkit-text-stroke:1.2px rgba(58,79,208,.16);
+  pointer-events:none;user-select:none;
+}
+@supports not (-webkit-text-stroke:1px #000){.sec-ghost{color:rgba(58,79,208,.07)}}
+.caption-pull{margin:-40px 0 52px}
+
+/* ---------- NOW board ---------- */
+.now{background:var(--paper);border-bottom:1.5px solid var(--ink)}
+.board{
+  border:1.5px solid var(--ink);border-radius:var(--r-l);
+  background:var(--paper);overflow:hidden;
+  box-shadow:8px 8px 0 rgba(159,176,246,.5);
+}
+.board-head{
+  display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;
+  padding:18px 26px;border-bottom:1.5px solid var(--ink);
+  background:linear-gradient(120deg,rgba(214,221,252,.5),rgba(255,255,255,0) 55%);
+}
+.board-head .live{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--font-en);font-weight:700;font-size:10.5px;letter-spacing:.22em;color:var(--cobalt);
+}
+.board-head .live .pulse{width:8px;height:8px;border-radius:50%;background:var(--cobalt);animation:pulse 2s ease-in-out infinite}
+.board-head h3{font-family:var(--font-disp);font-weight:700;font-size:17px;letter-spacing:.04em;font-feature-settings:"palt" 1}
+.board-head .upd{
+  margin-left:auto;
+  font-family:var(--font-en);font-weight:600;font-size:10px;letter-spacing:.18em;color:var(--ink-soft);
+  font-variant-numeric:tabular-nums;
+}
+.board-row{
+  display:grid;grid-template-columns:112px 1fr auto;align-items:center;gap:12px 22px;
+  padding:19px 26px;border-bottom:1px solid var(--line-soft);
+  transition:background .25s;
+}
+.board-row:hover{background:rgba(214,221,252,.22)}
+.board-row:last-of-type{border-bottom:0}
+.st{
+  justify-self:start;display:inline-flex;align-items:center;gap:7px;
+  font-weight:700;font-size:11px;letter-spacing:.06em;
+  border:1.5px solid;border-radius:999px;padding:4px 12px;white-space:nowrap;
+}
+.st::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.st-live{color:var(--cobalt);border-color:rgba(58,79,208,.5);background:rgba(58,79,208,.06)}
+.st-soon{color:#B26E00;border-color:rgba(178,110,0,.45);background:rgba(255,216,77,.16)}
+.st-weekly{color:#0E7A96;border-color:rgba(14,122,150,.4);background:rgba(159,176,246,.14)}
+.board-row .bt h4{font-size:14.5px;font-weight:900;font-feature-settings:"palt" 1;letter-spacing:.02em}
+.board-row .bt p{font-size:12px;color:var(--ink-soft);margin-top:1px}
+.board-row .circ{justify-self:end}
+.board-row:hover .circ{background:var(--ink)}
+.board-row:hover .circ svg{stroke:#fff;transform:rotate(45deg)}
+.daily{
+  display:grid;grid-template-columns:auto 1fr 1fr 1fr;align-items:stretch;
+  border-top:1.5px solid var(--ink);background:var(--mist);
+}
+.daily-label{
+  display:flex;align-items:center;gap:10px;
+  padding:18px 26px;border-right:1px solid var(--line);
+  font-family:var(--font-en);font-weight:800;font-size:12px;letter-spacing:.2em;color:var(--ink);
+  background:var(--spark);
+}
+.daily-cell{
+  display:flex;align-items:center;gap:14px;
+  padding:16px 22px;border-right:1px solid var(--line);
+}
+.daily-cell:last-child{border-right:0}
+.daily-cell .no{
+  font-family:var(--font-pop);font-weight:700;font-size:21px;line-height:1;
+  color:transparent;-webkit-text-stroke:1.2px var(--cobalt);
+}
+@supports not (-webkit-text-stroke:1px #000){.daily-cell .no{color:var(--cobalt)}}
+.daily-cell h5{font-family:var(--font-disp);font-weight:700;font-size:13.5px}
+.daily-cell p{font-size:11px;color:var(--ink-soft);line-height:1.5}
+.board-note{margin-top:16px;font-size:11.5px;color:var(--ink-soft)}
+
+/* ---------- schedule ---------- */
+.schedule{background:var(--mist)}
+/* 公式／ファン活動はタブではなく2分割で同時に見せる */
+.sch-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 56px}
+.sch-col:last-child{border-left:1px solid var(--line);padding-left:56px}
+.sch-col-head{
+  display:flex;align-items:baseline;gap:12px;
+  padding-bottom:13px;border-bottom:1.5px solid var(--ink);
+}
+.sch-col-head h3{font-family:var(--font-disp);font-weight:700;font-size:16px;letter-spacing:.05em;font-feature-settings:"palt" 1}
+.sch-col-head .en-tag{font-family:var(--font-en);font-weight:700;font-size:9.5px;letter-spacing:.24em;color:var(--cobalt)}
+.sch-col-head .cnt{
+  margin-left:auto;
+  font-family:var(--font-en);font-weight:700;font-size:10px;color:var(--cobalt);
+  border:1.5px solid rgba(58,79,208,.4);border-radius:999px;padding:1px 8px;
+}
+.sch-month{
+  font-family:var(--font-en);font-weight:700;font-size:10px;letter-spacing:.26em;
+  color:var(--ink-soft);
+  padding:28px 8px 10px;border-bottom:1px solid var(--line);
+  display:flex;align-items:center;gap:12px;
+}
+.sch-month::after{content:"";flex:1;border-top:1px dashed rgba(18,28,66,.15)}
+.sch-item{
+  display:grid;grid-template-columns:92px 1fr;gap:6px 18px;align-items:start;
+  padding:19px 4px;border-bottom:1px solid var(--line);
+  transition:background .25s,padding-left .3s;
+}
+.sch-item:hover{background:rgba(255,255,255,.75);padding-left:12px}
+.sch-item .sch-date{grid-row:span 2}
+.sch-item .sch-tag{grid-column:2;justify-self:start}
+.sch-item .sch-body{grid-column:2}
+.sch-date{
+  font-family:var(--font-en);font-weight:700;font-size:24px;letter-spacing:-.01em;line-height:1;
+  display:flex;flex-direction:column;gap:6px;font-variant-numeric:tabular-nums;
+}
+.sch-date small{font-size:10px;font-weight:600;letter-spacing:.22em;color:var(--ink-soft)}
+.sch-date small.sat{color:var(--sky-deep)}
+.sch-date small.sun{color:#CD6969}
+.sch-tag{
+  justify-self:start;
+  font-family:var(--font-en);font-weight:700;font-size:10px;letter-spacing:.16em;
+  padding:5px 13px;border-radius:999px;border:1.5px solid;white-space:nowrap;
+  background:#fff;box-shadow:2px 2px 0 rgba(18,28,66,.12);
+}
+.tag-release{color:var(--cobalt);border-color:rgba(58,79,208,.55)}
+.tag-live{color:#C24D86;border-color:rgba(194,77,134,.5)}
+.tag-media{color:#7A44D6;border-color:rgba(122,68,214,.5)}
+.tag-event{color:#0E8F6E;border-color:rgba(14,143,110,.5)}
+.tag-vote{color:#B26E00;border-color:rgba(178,110,0,.5);background:rgba(255,216,77,.2)}
+.tag-fanwork{color:#0E7A96;border-color:rgba(14,122,150,.5)}
+.sch-item h4{font-size:14px;font-weight:900;font-feature-settings:"palt" 1;letter-spacing:.02em}
+.sch-item .sch-note{font-size:11.5px;color:var(--ink-soft);font-weight:500;margin-top:2px}
+.sch-caption{margin-top:18px;font-size:11.5px;color:var(--ink-soft)}
+
+/* ---------- birthday ---------- */
+.birthday-sec{
+  background:
+    radial-gradient(760px 460px at 92% 4%, rgba(255,216,77,.14), transparent 55%),
+    var(--paper);
+  border-top:1.5px solid var(--ink);
+}
+.flow{
+  position:relative;
+  display:grid;grid-template-columns:repeat(3,1fr);
+  margin:8px 0 56px;
+}
+.flow::before{
+  content:"";position:absolute;left:4%;right:4%;top:31px;
+  border-top:2px dashed rgba(58,79,208,.4);
+}
+.flow-step{position:relative;padding:0 26px}
+.flow-step + .flow-step{border-left:1px solid var(--line-soft)}
+.flow-node{
+  position:relative;z-index:1;
+  width:62px;height:62px;border-radius:50%;
+  background:var(--paper);border:1.5px solid var(--ink);
+  display:grid;place-items:center;margin-bottom:18px;
+  box-shadow:4px 4px 0 rgba(159,176,246,.75);
+}
+.flow-node svg{width:26px;height:26px;stroke:var(--ink);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.flow-step:last-child .flow-node{background:var(--spark)}
+/* 注意: opacity:0 は .rv が付いている間だけ。
+   （リビール後にJSがクラスを外すと透明のままになるバグを防ぐ） */
+.flow.rv .flow-node{opacity:0}
+.flow.in .flow-node{animation:pop .55s cubic-bezier(.34,1.56,.64,1) both}
+.flow.in .flow-step:nth-child(1) .flow-node{animation-delay:.05s}
+.flow.in .flow-step:nth-child(2) .flow-node{animation-delay:.22s}
+.flow.in .flow-step:nth-child(3) .flow-node{animation-delay:.4s}
+@keyframes pop{from{opacity:0;transform:scale(.5)}to{opacity:1}}
+.flow-no{
+  font-family:var(--font-pop);font-weight:700;font-size:32px;line-height:1;
+  color:transparent;-webkit-text-stroke:1.4px var(--cobalt);
+  display:block;margin-bottom:8px;
+}
+@supports not (-webkit-text-stroke:1px #000){.flow-no{color:var(--cobalt)}}
+.flow-step h4{font-family:var(--font-disp);font-weight:700;font-size:17px;letter-spacing:.05em}
+.flow-step h4 .fe{font-family:var(--font-serif);font-style:italic;font-weight:400;font-size:14px;color:var(--cobalt);margin-left:9px}
+.flow-step p{font-size:12.5px;color:var(--ink-soft);margin-top:8px;line-height:1.8}
+
+.list-head{
+  display:flex;align-items:baseline;justify-content:space-between;gap:14px;
+  padding-bottom:14px;border-bottom:1.5px solid var(--ink);
+}
+.list-head h3{font-family:var(--font-disp);font-weight:700;font-size:15.5px;letter-spacing:.06em}
+.list-head .lh-en{font-family:var(--font-en);font-weight:600;font-size:10px;letter-spacing:.22em;color:var(--ink-soft)}
+.app-row{
+  display:grid;grid-template-columns:56px 1.05fr 1.3fr auto;align-items:center;gap:20px;
+  padding:19px 6px;border-bottom:1px solid var(--line);
+  transition:background .25s,padding-left .3s;
+}
+.app-row:hover{background:rgba(214,221,252,.24);padding-left:16px}
+/* アプリロゴタイル（公式アイコン画像が用意できたら中身を <img> に差し替え） */
+.ar-logo{
+  width:50px;height:50px;border-radius:14px;overflow:hidden;
+  display:grid;place-items:center;
+  font-family:var(--font-pop);font-weight:700;font-size:14px;letter-spacing:0;
+  border:1.5px solid var(--ink);
+  box-shadow:2.5px 2.5px 0 rgba(125,143,239,.6);
+}
+.ar-logo.jp{font-family:var(--font-disp);font-size:18px}
+.ar-logo img{width:100%;height:100%;object-fit:cover}
+.lt-a{background:var(--sky-soft);color:var(--ink)}
+.lt-b{background:var(--cobalt);color:#fff}
+.lt-c{background:var(--ink);color:#fff}
+.ar-main h4{font-family:var(--font-disp);font-weight:700;font-size:15.5px;line-height:1.5;letter-spacing:.04em}
+.ar-main h4 small{font-family:var(--font-jp);font-size:11px;font-weight:700;color:var(--ink-soft);margin-left:2px}
+.ar-meta{font-family:var(--font-en);font-weight:600;font-size:9.5px;letter-spacing:.2em;color:var(--cobalt);margin-top:2px}
+.ar-desc{font-size:12.5px;color:var(--ink-soft);line-height:1.75}
+.app-row:hover .circ{background:var(--ink)}
+.app-row:hover .circ svg{stroke:#fff;transform:rotate(45deg)}
+.list-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-top:26px}
+.list-foot .note{font-size:11.5px;color:var(--ink-soft)}
+
+/* ---------- interlude（写真がダーク帯の縁にすわる） ---------- */
+.interlude{
+  position:relative;
+  background:
+    radial-gradient(800px 500px at 88% 10%, rgba(255,255,255,.5), transparent 55%),
+    linear-gradient(155deg,#C3CDFA 0%,#9FB0F6 52%,#7386EE 100%);
+}
+.interlude::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(rgba(255,255,255,.5) 1px,transparent 1.4px);
+  background-size:30px 30px;
+  mask-image:linear-gradient(to top,rgba(0,0,0,.55),transparent 65%);
+  -webkit-mask-image:linear-gradient(to top,rgba(0,0,0,.55),transparent 65%);
+}
+/* コピーは置かない。写真だけのビジュアルバンド */
+.interlude-inner{
+  position:relative;
+  display:flex;justify-content:center;
+  padding:72px 0 0;
+}
+.interlude-photo{position:relative;z-index:5}
+.interlude-photo .cut{
+  width:min(440px,90vw);
+  filter:drop-shadow(0 36px 60px rgba(6,14,32,.5));
+  margin-bottom:-92px;
+}
+.interlude-photo .il-tag{
+  position:absolute;right:-56px;bottom:-18px;z-index:2;
+  background:var(--ink);color:#fff;
+  font-family:var(--font-en);font-weight:700;font-size:10px;letter-spacing:.2em;
+  padding:9px 16px;border-radius:999px;rotate:3deg;
+  border:1.5px solid rgba(255,255,255,.25);
+  box-shadow:3px 3px 0 rgba(159,176,246,.4);
+}
+/* ---------- vote (music show) — ダークステージ ---------- */
+.vote-sec{position:relative}
+.vote-sec.dark{
+  position:relative;z-index:2;
+  margin-top:-56px;
+  border-radius:48px 48px 0 0;
+  padding-top:170px;
+  background:
+    radial-gradient(900px 520px at 85% -10%, rgba(58,79,208,.4), transparent 62%),
+    radial-gradient(700px 480px at 0% 112%, rgba(125,143,239,.18), transparent 55%),
+    var(--ink);
+  color:#fff;
+}
+.dark .sec-eyebrow{box-shadow:3px 3px 0 rgba(58,79,208,.8)}
+.dark .sec-title{color:#fff}
+.dark .sec-title em{color:var(--sky)}
+.dark .sec-title .sec-en{color:var(--sky)}
+.dark .sec-sub{color:rgba(255,255,255,.62)}
+.dark .sec-ghost{-webkit-text-stroke-color:rgba(159,176,246,.22)}
+@supports not (-webkit-text-stroke:1px #000){.dark .sec-ghost{color:rgba(159,176,246,.08)}}
+
+.week-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:56px;padding-bottom:6px}
+.week{
+  min-width:660px;
+  border:1.5px solid var(--ink);border-radius:var(--r-m);
+  overflow:hidden;background:var(--paper);
+}
+.week-head,.week-row{display:grid;grid-template-columns:92px repeat(7,1fr)}
+.week-head{border-bottom:1.5px solid var(--ink);background:var(--mist)}
+.week-head .cell{
+  padding:10px 6px;text-align:center;
+  font-family:var(--font-en);font-weight:700;font-size:10px;letter-spacing:.18em;color:var(--ink-soft);
+  border-left:1px solid var(--line-soft);
+}
+.week-head .cell:first-child{border-left:0;text-align:left;padding-left:16px;color:var(--ink)}
+.week-head .cell.hl{color:var(--cobalt)}
+.week-row{border-bottom:1px solid var(--line-soft);min-height:52px}
+.week-row:last-child{border-bottom:0}
+.week-row .wlab{
+  display:flex;align-items:center;padding-left:16px;
+  font-family:var(--font-disp);font-weight:700;font-size:12.5px;letter-spacing:.06em;
+  border-right:1px solid var(--line-soft);
+}
+.week-row .wtrack{position:relative;grid-column:2/9;display:grid;grid-template-columns:repeat(7,1fr);align-items:center}
+.week-row .wtrack::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(to right,var(--line-soft) 1px,transparent 1px);
+  background-size:calc(100%/7) 100%;
+}
+.wbar{
+  position:relative;z-index:1;height:30px;margin:0 7px;
+  display:flex;align-items:center;justify-content:center;gap:6px;
+  border-radius:999px;
+  font-weight:700;font-size:10.5px;letter-spacing:.04em;white-space:nowrap;
+  transform-origin:left center;
+}
+.week-scroll.rv .wbar{opacity:0}
+.week-scroll.in .wbar{animation:grow .9s var(--ease-out) both}
+.week-scroll.in .week-row:nth-child(2) .wbar{animation-delay:.1s}
+.week-scroll.in .week-row:nth-child(3) .wbar{animation-delay:.3s}
+.week-scroll.in .week-row:nth-child(4) .wbar{animation-delay:.5s}
+@keyframes grow{from{opacity:0;transform:scaleX(.15)}to{opacity:1}}
+.wbar-vote{grid-column:1/4;background:rgba(58,79,208,.12);border:1.5px solid rgba(58,79,208,.55);color:var(--cobalt)}
+.wbar-onair{grid-column:4/5;background:var(--ink);color:#fff}
+.wbar-stream{grid-column:1/8;background:rgba(159,176,246,.2);border:1.5px dashed rgba(14,122,150,.5);color:#0E7A96}
+.week-caption{margin-top:14px;font-size:11.5px;color:var(--ink-soft)}
+
+.dark .week{border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.03);box-shadow:8px 8px 0 rgba(58,79,208,.35)}
+.dark .week-head{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.3)}
+.dark .week-head .cell{color:rgba(255,255,255,.55);border-color:var(--wline)}
+.dark .week-head .cell:first-child{color:#fff}
+.dark .week-head .cell.hl{color:var(--sky)}
+.dark .week-row{border-color:var(--wline)}
+.dark .week-row .wlab{color:#fff;border-color:var(--wline)}
+.dark .week-row .wtrack::before{background-image:linear-gradient(to right,rgba(255,255,255,.08) 1px,transparent 1px)}
+.dark .wbar-vote{background:rgba(159,176,246,.14);border-color:rgba(159,176,246,.6);color:var(--sky-soft)}
+.dark .wbar-onair{background:var(--spark);color:var(--ink)}
+.dark .wbar-stream{background:rgba(159,176,246,.07);border-color:rgba(159,176,246,.4);color:var(--sky)}
+.dark .week-caption{color:rgba(255,255,255,.5)}
+.dark .list-head{border-color:rgba(255,255,255,.85)}
+.dark .list-head h3{color:#fff}
+.dark .list-head .lh-en{color:rgba(255,255,255,.5)}
+.dark .app-row{border-color:var(--wline)}
+.dark .app-row:hover{background:rgba(255,255,255,.05)}
+.dark .ar-logo{border-color:rgba(255,255,255,.85);box-shadow:2.5px 2.5px 0 rgba(58,79,208,.5)}
+.dark .lt-c{background:#fff;color:var(--ink)}
+.dark .ar-main h4{color:#fff}
+.dark .ar-main h4 small{color:rgba(255,255,255,.55)}
+.dark .ar-meta{color:var(--sky)}
+.dark .ar-desc{color:rgba(255,255,255,.62)}
+.dark .circ{border-color:rgba(255,255,255,.85);background:transparent;box-shadow:2.5px 2.5px 0 rgba(58,79,208,.5)}
+.dark .circ svg{stroke:#fff}
+.dark .app-row:hover .circ{background:var(--sky);border-color:var(--sky)}
+.dark .app-row:hover .circ svg{stroke:var(--ink)}
+.dark .list-foot .note{color:rgba(255,255,255,.5)}
+.dark .btn{box-shadow:4px 4px 0 rgba(125,143,239,.8)}
+.dark .btn:hover{box-shadow:6px 6px 0 var(--sky)}
+
+/* ---------- gallery ---------- */
+.gallery{background:var(--mist);border-bottom:1px solid var(--line)}
+.gal-head-row{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
+.gal-head-row .sec-head{margin-bottom:0}
+.gal-hint{
+  font-family:var(--font-en);font-weight:600;font-size:10.5px;letter-spacing:.2em;color:var(--ink-soft);
+  display:flex;align-items:center;gap:10px;padding-bottom:10px;white-space:nowrap;
+}
+.gal-hint::after{content:"";width:40px;height:1.5px;background:var(--ink-soft)}
+.gal-wrap{position:relative}
+.gal-fade{
+  position:absolute;right:0;top:0;bottom:30px;width:110px;z-index:2;pointer-events:none;
+  background:linear-gradient(to right,rgba(243,245,254,0),var(--mist));
+  transition:opacity .3s;
+}
+.gal-wrap.end .gal-fade{opacity:0}
+.gal-rail{
+  display:flex;gap:26px;overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  padding:18px 4px 30px;
+  -webkit-overflow-scrolling:touch;
+  cursor:grab;
+}
+.gal-rail.dragging{cursor:grabbing;scroll-snap-type:none}
+.gal-rail::-webkit-scrollbar{height:5px}
+.gal-rail::-webkit-scrollbar-thumb{background:var(--sky);border-radius:99px}
+.gal-rail::-webkit-scrollbar-track{background:transparent}
+.frame{
+  position:relative;flex:0 0 min(300px,76vw);scroll-snap-align:start;
+  background:#fff;border:1.5px solid rgba(18,28,66,.85);border-radius:8px;
+  padding:12px 12px 16px;
+  box-shadow:5px 5px 0 rgba(159,176,246,.55);
+  transition:transform .35s,box-shadow .35s;
+}
+.frame:nth-child(odd){transform:rotate(-1.4deg)}
+.frame:nth-child(even){transform:rotate(1.1deg)}
+.frame:hover{transform:rotate(0) translateY(-6px);box-shadow:7px 9px 0 rgba(159,176,246,.7)}
+.frame::before{
+  content:"";position:absolute;top:-11px;left:50%;transform:translateX(-50%) rotate(-2deg);
+  width:86px;height:24px;border-radius:2px;
+  background:rgba(214,221,252,.75);
+  border:1px solid rgba(159,176,246,.6);
+  backdrop-filter:blur(2px);
+}
+.frame .shot{
+  aspect-ratio:4/5;border-radius:4px;overflow:hidden;position:relative;
+  background:
+    radial-gradient(240px 180px at 70% 20%, rgba(159,176,246,.35), transparent 60%),
+    linear-gradient(160deg,#ECF0FE,#F8F9FF 60%,#fff);
+  display:grid;place-items:center;
+}
+.frame .shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.frame .ph{
+  font-family:var(--font-en);font-weight:700;font-size:10px;letter-spacing:.26em;
+  color:var(--sky-deep);
+  border:1.5px dashed rgba(125,143,239,.75);border-radius:999px;
+  padding:9px 16px;background:rgba(255,255,255,.6);
+}
+.frame .cap{display:flex;align-items:baseline;gap:10px;margin-top:12px;padding:0 2px}
+.frame .cap .fno{font-family:var(--font-pop);font-weight:700;font-size:10.5px;letter-spacing:.06em;color:var(--cobalt)}
+.frame .cap .ft{font-family:var(--font-disp);font-weight:700;font-size:13px;line-height:1.5;letter-spacing:.03em}
+.frame .cap-sub{font-size:10.5px;color:var(--ink-soft);padding:2px 2px 0;line-height:1.6}
+.frame .cap-sub .era{font-family:var(--font-en);font-weight:700;font-size:9px;letter-spacing:.18em;color:var(--sky-deep);display:block}
+
+/* ---------- about ---------- */
+.about{
+  background:
+    radial-gradient(700px 460px at 6% 16%, rgba(159,176,246,.28), transparent 60%),
+    var(--paper);
+  padding-bottom:140px;
+}
+.about-inner{display:grid;grid-template-columns:.92fr 1.08fr;gap:70px;align-items:center}
+.about-photo{position:relative;justify-self:center;width:min(380px,100%)}
+.about-circle{
+  width:100%;aspect-ratio:1;border-radius:50%;
+  background:
+    radial-gradient(circle at 50% 36%, rgba(255,255,255,.85), rgba(255,255,255,0) 58%),
+    linear-gradient(170deg,#DFF0FE,#C3CDFA);
+  border:1.5px solid rgba(18,28,66,.2);
+}
+.about-photo .cut{
+  position:absolute;left:50%;bottom:36px;transform:translateX(-50%);
+  width:86%;
+  filter:drop-shadow(0 20px 34px rgba(58,79,208,.3));
+}
+.nameplate{
+  position:absolute;left:50%;bottom:0;transform:translateX(-50%);z-index:2;
+  width:100%;
+  display:flex;justify-content:space-between;align-items:center;gap:10px;
+  background:#fff;border:1.5px solid var(--ink);border-radius:999px;
+  padding:12px 22px;
+  box-shadow:4px 4px 0 var(--sky-deep);
+}
+.nameplate .np-jp{font-family:var(--font-disp);font-weight:700;font-size:16px;letter-spacing:.08em}
+.nameplate .np-logo{height:11px;width:auto;display:block;opacity:.85}
+.about-photo .badge{
+  position:absolute;top:42%;right:-9%;z-index:2;
+  background:var(--spark);color:var(--ink);
+  font-family:var(--font-en);font-weight:800;font-size:10.5px;letter-spacing:.12em;
+  padding:11px 18px;border-radius:999px;rotate:6deg;
+  border:1.5px solid var(--ink);
+  box-shadow:3px 3px 0 rgba(18,28,66,.85);
+}
+.about-photo .ph-caption{
+  position:absolute;left:-28px;bottom:60px;
+  writing-mode:vertical-rl;transform:rotate(180deg);
+  font-family:var(--font-en);font-weight:600;font-size:9.5px;letter-spacing:.3em;color:var(--ink-soft);
+}
+.about-body .sec-head{margin-bottom:24px}
+.about-body p{font-size:13.5px;color:var(--ink-soft);margin-bottom:16px}
+.about-body p strong{color:var(--ink)}
+.about-body p.about-quote{
+  font-family:var(--font-serif);font-style:italic;
+  font-size:clamp(22px,2.8vw,30px);line-height:1.4;color:var(--cobalt);
+  margin-bottom:22px;
+}
+.about-note{
+  margin-top:26px;padding:20px 24px;position:relative;
+  background:var(--mist);border:1.5px solid var(--line);border-radius:var(--r-m);
+  font-size:12px;color:var(--ink-soft);line-height:1.9;
+}
+.about-note::before{
+  content:"NOTICE";position:absolute;top:-10px;left:18px;
+  font-family:var(--font-en);font-weight:700;font-size:9px;letter-spacing:.22em;color:var(--ink);
+  background:#fff;padding:2px 12px;border:1.5px solid var(--ink);border-radius:999px;
+  rotate:-2deg;
+}
+.about-note b{color:var(--ink)}
+
+/* ---------- footer ---------- */
+.footer{
+  background:var(--ink);color:#fff;position:relative;z-index:2;
+  margin-top:-48px;
+  border-radius:44px 44px 0 0;
+  overflow:hidden;
+}
+.footer .ticker{border-color:rgba(255,255,255,.16);background:transparent}
+.footer .ticker span{color:rgba(255,255,255,.85)}
+.footer .ticker span i{color:var(--sky)}
+.foot-giant{
+  position:absolute;left:50%;bottom:-4%;transform:translateX(-50%);
+  font-family:var(--font-popw);font-weight:700;white-space:nowrap;
+  font-size:clamp(70px,10.5vw,175px);line-height:.8;letter-spacing:0;
+  color:transparent;-webkit-text-stroke:1px rgba(159,176,246,.14);
+  pointer-events:none;user-select:none;
+}
+@supports not (-webkit-text-stroke:1px #000){.foot-giant{color:rgba(159,176,246,.06)}}
+.totop{
+  position:absolute;right:5%;top:-26px;z-index:5;
+  width:66px;height:66px;border-radius:50%;
+  background:#fff;border:1.5px solid var(--ink);
+  display:grid;place-items:center;
+  box-shadow:4px 4px 0 rgba(125,143,239,.8);
+  transition:translate .16s,box-shadow .16s;
+}
+.totop:hover{translate:-2px -2px;box-shadow:6px 6px 0 var(--sky)}
+.totop .tt-ring{position:absolute;inset:4px;animation:spin 16s linear infinite}
+.totop .tt-ring text{font-family:var(--font-en);font-weight:700;font-size:8.4px;letter-spacing:.3em;fill:var(--ink-soft)}
+.totop .tt-arr{width:16px;height:16px;stroke:var(--ink);fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.foot-inner{position:relative;display:flex;flex-wrap:wrap;justify-content:space-between;gap:40px;padding:70px 0 30px}
+.foot-brand .mark{display:flex;flex-direction:column;gap:6px}
+.foot-brand .lg-top{font-size:27px;color:#fff}
+.foot-brand .lg-sub{font-size:12px;color:var(--sky);padding-left:2px}
+.foot-brand p{font-size:12px;color:rgba(255,255,255,.65);margin-top:12px;max-width:360px}
+.foot-logo{
+  display:inline-flex;align-items:center;
+  background:#fff;border-radius:999px;padding:9px 18px;margin-top:16px;
+  box-shadow:3px 3px 0 rgba(125,143,239,.5);
+}
+.foot-logo img{height:12px;width:auto;display:block}
+.fb-key{display:inline-flex;align-items:center}
+.fb-key svg{width:15px;height:15px;stroke:var(--sky);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;opacity:.8}
+.foot-nav{display:flex;gap:44px}
+.foot-nav h5{font-family:var(--font-en);font-weight:700;font-size:10.5px;letter-spacing:.24em;color:var(--sky);margin-bottom:14px}
+.foot-nav a{display:block;font-size:12.5px;color:rgba(255,255,255,.8);padding:5px 0;transition:color .2s,padding-left .25s}
+.foot-nav a:hover{color:var(--sky);padding-left:6px}
+.foot-bottom{
+  position:relative;padding:20px 0 26px;
+  border-top:1px solid rgba(255,255,255,.14);
+  display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 20px;
+  font-size:11px;color:rgba(255,255,255,.68);
+}
+
+/* ---------- reveal ----------
+   transformではなくtranslateプロパティを使う（静的なrotate等と衝突させない） */
+.rv{opacity:0;translate:0 26px;transition:opacity .8s ease,translate .8s ease}
+.rv.in{opacity:1;translate:0 0}
+
+/* ---------- responsive ---------- */
+@media (max-width:1240px){
+  .hero-side,.hud{display:none}
+}
+@media (max-width:960px){
+  .hero{padding-top:86px;min-height:0}
+  .hero-main{grid-template-columns:1fr;gap:0}
+  /* スマホは写真ファースト: 写真 → タイトル（写真下部に重なる） → 本文 */
+  .hero-visual{order:-1;justify-self:center;margin-left:0;margin-top:0}
+  .hero-visual .cut{
+    width:min(400px,94vw);
+    -webkit-mask-image:linear-gradient(to bottom,#000 80%,transparent 99%);
+            mask-image:linear-gradient(to bottom,#000 80%,transparent 99%);
+  }
+  .hero-copy{padding-bottom:12px;margin-top:calc(-1 * clamp(84px,24vw,120px));position:relative;z-index:3}
+  .hero-label{display:none}
+  .stamp-wrap{width:96px;height:96px;left:-6px;bottom:34%}
+  .key-fab{right:2px;top:16%}
+  .hero-visual .ghost{right:-2%;top:-6%}
+  .scroll-cue{display:none}
+  .board-row{grid-template-columns:1fr auto;grid-template-rows:auto auto;gap:8px 16px;padding:17px 20px}
+  .board-row .st{grid-row:2;grid-column:1}
+  .board-row .bt{grid-column:1}
+  .board-row .circ{grid-row:1/3;align-self:center}
+  .daily{grid-template-columns:1fr}
+  .daily-label{border-right:0;padding:13px 22px}
+  .daily-cell{border-right:0;border-top:1px solid var(--line)}
+  .sch-grid{grid-template-columns:1fr;gap:48px 0}
+  .sch-col:last-child{border-left:0;padding-left:0}
+  .flow{grid-template-columns:1fr;gap:34px}
+  .flow::before{left:31px;right:auto;top:8%;bottom:6%;border-top:0;border-left:2px dashed rgba(58,79,208,.4)}
+  .flow-step{padding:0;display:grid;grid-template-columns:62px 1fr;gap:0 20px}
+  .flow-step + .flow-step{border-left:0}
+  .flow-node{margin-bottom:0}
+  .flow-body{grid-column:2}
+  .app-row{grid-template-columns:50px 1fr auto;gap:8px 16px}
+  .ar-desc{grid-column:2;margin-top:-4px}
+  .interlude-inner{padding:56px 0 0}
+  .interlude-photo .cut{width:min(340px,86vw);margin-bottom:-64px}
+  .vote-sec.dark{margin-top:-44px;padding-top:130px;border-radius:32px 32px 0 0}
+  .about-inner{grid-template-columns:1fr;gap:56px}
+  .foot-nav{gap:30px;flex-wrap:wrap}
+}
+@media (max-width:640px){
+  body{font-size:14px}
+  .gnav{display:none}
+  .menu-btn{display:block}
+  .header{padding:8px 8px 8px 18px}
+  .section{padding:72px 0}
+  .hero-title{font-size:clamp(56px,15.5vw,74px)}
+  .hero-cta .btn{width:100%;justify-content:center}
+  .sec-ghost{display:none}
+  .sec-title .sec-en{display:block;margin:6px 0 0}
+  .sch-item{grid-template-columns:82px 1fr;padding:16px 2px}
+  .sch-date{font-size:21px}
+  .sch-item:hover{padding-left:4px}
+  /* 週間カレンダーはスワイプ不要で1画面に収める */
+  .week-scroll{overflow:visible;padding-bottom:0}
+  .week{min-width:0}
+  .week-head,.week-row{grid-template-columns:38px repeat(7,1fr)}
+  .week-head .cell{padding:8px 1px;font-size:7.5px;letter-spacing:.02em}
+  .week-head .cell:first-child{padding-left:7px}
+  .week-row{min-height:42px}
+  .week-row .wlab{font-size:10px;padding-left:7px;letter-spacing:0}
+  .wbar{height:24px;margin:0 3px;font-size:9px;letter-spacing:.01em;gap:3px}
+  .board-head{padding:15px 18px}
+  .board-head .upd{margin-left:0;width:100%}
+  .app-row:hover{padding-left:6px}
+  .list-foot .btn{width:100%;justify-content:center}
+  .gal-head-row{flex-direction:column;align-items:flex-start;gap:2px}
+  .gal-hint{padding-bottom:0}
+  .gal-fade{width:60px}
+  .frame{flex-basis:min(260px,78vw)}
+  .about-photo .ph-caption{display:none}
+  .about-photo .badge{right:0}
+  .foot-giant{display:none}
+  .footer{border-radius:26px 26px 0 0;margin-top:-30px}
+  .totop{right:6%;top:-26px;width:60px;height:60px}
+  .foot-inner{padding-top:56px}
+  .interlude-photo .il-tag{right:2px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1!important;translate:none!important}
+  .flow .flow-node,.week-scroll .wbar{opacity:1!important}
+  .sheet-nav a{opacity:1!important;transform:none!important}
+  .intro,.cur-dot,.cur-ring{display:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+<noscript><style>.rv{opacity:1;translate:none}.intro{display:none}</style></noscript>
+</head>
+<body>
+
+<a class="skip" href="#now">本文へスキップ</a>
+
+<!-- ================= INTRO（初回のみ） ================= -->
+<div class="intro" aria-hidden="true">
+  <div class="intro-in">
+    <span class="intro-mark"><span class="lg-top">RYOGA</span><span class="lg-sub">Support</span></span>
+    <span class="intro-jp">りょがサポ</span>
+  </div>
+</div>
+
+<!-- カーソルフォロワー（デスクトップのみ） -->
+<div class="cur-dot" aria-hidden="true"></div>
+<div class="cur-ring" aria-hidden="true"></div>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+  <a class="logo" href="#top" aria-label="りょがサポ トップへ">
+    <span class="lg-top">RYOGA</span>
+    <span class="lg-sub">Support</span>
+  </a>
+  <nav class="gnav" aria-label="グローバルナビゲーション">
+    <a href="#now"><span class="rl"><span class="rt" data-l="Now">Now</span></span></a>
+    <a href="#schedule"><span class="rl"><span class="rt" data-l="Schedule">Schedule</span></span></a>
+    <a href="#birthday"><span class="rl"><span class="rt" data-l="Birthday">Birthday</span></span></a>
+    <a href="#vote"><span class="rl"><span class="rt" data-l="Vote">Vote</span></span></a>
+    <a href="#gallery"><span class="rl"><span class="rt" data-l="Gallery">Gallery</span></span></a>
+    <a href="#about"><span class="rl"><span class="rt" data-l="About">About</span></span></a>
+    <a class="nav-x" href="https://x.com/FD_RYOGA_JP" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-4.9-6.4L6.4 22H3.2l7.3-8.3L1 2h6.5l4.4 5.9L18.9 2zm-1.1 18h1.7L7.6 3.9H5.8L17.8 20z"/></svg>
+      Follow
+    </a>
+  </nav>
+  <button class="menu-btn" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="sheet">
+    <span></span><span></span>
+  </button>
+</header>
+
+<!-- モバイル用シートメニュー -->
+<div class="sheet" id="sheet">
+  <nav class="sheet-nav" aria-label="モバイルナビゲーション">
+    <a href="#now"><span class="no">01</span><span class="t">今日のりょがサポ</span><span class="e">now</span></a>
+    <a href="#schedule"><span class="no">02</span><span class="t">スケジュール</span><span class="e">schedule</span></a>
+    <a href="#birthday"><span class="no">03</span><span class="t">センイル投票</span><span class="e">birthday</span></a>
+    <a href="#vote"><span class="no">04</span><span class="t">音楽番組の集票</span><span class="e">vote</span></a>
+    <a href="#gallery"><span class="no">05</span><span class="t">応援広告アーカイブ</span><span class="e">gallery</span></a>
+    <a href="#about"><span class="no">06</span><span class="t">りょがサポについて</span><span class="e">about</span></a>
+  </nav>
+  <a class="sheet-x" href="https://x.com/FD_RYOGA_JP" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-4.9-6.4L6.4 22H3.2l7.3-8.3L1 2h6.5l4.4 5.9L18.9 2zm-1.1 18h1.7L7.6 3.9H5.8L17.8 20z"/></svg>
+    FOLLOW @FD_RYOGA_JP
+  </a>
+</div>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <span class="blob b1" aria-hidden="true"></span>
+  <span class="blob b2" aria-hidden="true"></span>
+
+  <div class="wrap hero-main">
+    <div class="hero-copy">
+      <p class="hero-label"><span class="pulse"></span>KO1KEYZ — FAN SUPPORT HUB</p>
+      <h1 class="hero-title">
+        <span class="clip c2"><span class="t1">RYOGA</span></span>
+        <span class="clip c3"><span class="t2">Support</span></span>
+      </h1>
+      <p class="hero-lead">
+        KO1KEYZ・<strong>飯塚亮賀</strong>くんを応援する有志ファンダム<br>
+        りょがサポの非公式ファンサイトです。
+      </p>
+     
+      <div class="hero-cta">
+        <a class="tlink" href="#schedule">スケジュールへ<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+
+      <div class="hero-chips">
+        <span class="chip chip-logo"><img src="../assets/ko1keyz-logo.png" alt="KO1KEYZ"></span>
+        <a class="chip" href="https://x.com/FD_RYOGA_JP" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-4.9-6.4L6.4 22H3.2l7.3-8.3L1 2h6.5l4.4 5.9L18.9 2zm-1.1 18h1.7L7.6 3.9H5.8L17.8 20z"/></svg>
+          @FD_RYOGA_JP
+        </a>
+        <span class="chip">DEBUT ERA</span>
+        <span class="chip">FAN-POWERED</span>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <span class="halo" aria-hidden="true"></span>
+      <p class="ghost serif-i" aria-hidden="true">Ryoga</p>
+      <img class="cut" src="../assets/ryoga-02-cut.png" srcset="../assets/ryoga-02-cut-sm.png 800w, ../assets/ryoga-02-cut.png 1200w" sizes="(max-width:960px) 94vw, 560px" width="900" height="1200" alt="KO1KEYZ 飯塚亮賀 公式アーティスト写真" fetchpriority="high">
+      <span class="key-fab" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><circle cx="7.2" cy="12" r="4.1"/><path d="M11.3 12H21M17.6 12v3.2M20.2 12v2.3"/></svg>
+      </span>
+      <span class="stamp-wrap" aria-hidden="true">
+        <svg class="stamp" viewBox="0 0 148 148">
+          <defs>
+            <path id="circlePath" d="M74,74 m-58,0 a58,58 0 1,1 116,0 a58,58 0 1,1 -116,0"/>
+          </defs>
+          <circle class="ring" cx="74" cy="74" r="72"/>
+          <circle class="core" cx="74" cy="74" r="26"/>
+          <circle class="hole" cx="74" cy="70" r="5.6"/>
+          <path class="hole" d="M74 72.5l-4.8 12.5h9.6z"/>
+          <text><textPath href="#circlePath">KO1KEYZ&#160;&#160;·&#160;&#160;IIZUKA RYOGA&#160;&#160;·&#160;&#160;DEBUT ERA&#160;&#160;·&#160;&#160;</textPath></text>
+        </svg>
+      </span>
+      <p class="ph-caption" aria-hidden="true">OFFICIAL ARTIST PHOTO — KO1KEYZ</p>
+    </div>
+  </div>
+
+  <p class="hero-side" aria-hidden="true">飯塚亮賀を、いちばん近くで。</p>
+  <p class="hud" aria-hidden="true">TOKYO, JP — <span id="jst">--:--:--</span> JST</p>
+  <div class="scroll-cue" aria-hidden="true"><span class="txt">SCROLL</span><span class="bar"></span></div>
+
+  <div class="ticker tilt" aria-hidden="true">
+    <div class="ticker-track">
+      <span>RYOGA SUPPORT <span class="star">✦</span> <i>fan-powered, always</i> <svg class="tk-ic" viewBox="0 0 24 24"><circle cx="7.2" cy="12" r="4.1"/><path d="M11.3 12H21M17.6 12v3.2M20.2 12v2.3"/></svg> KO1KEYZ <span class="star">✦</span> りょがサポ <span class="star">✦</span> IIZUKA RYOGA <svg class="tk-ic" viewBox="0 0 24 24"><circle cx="7.2" cy="12" r="4.1"/><path d="M11.3 12H21M17.6 12v3.2M20.2 12v2.3"/></svg> <i>from PRODUCE 101 JAPAN to the world</i> <span class="star">✦</span></span><span>RYOGA SUPPORT <span class="star">✦</span> <i>fan-powered, always</i> <svg class="tk-ic" viewBox="0 0 24 24"><circle cx="7.2" cy="12" r="4.1"/><path d="M11.3 12H21M17.6 12v3.2M20.2 12v2.3"/></svg> KO1KEYZ <span class="star">✦</span> りょがサポ <span class="star">✦</span> IIZUKA RYOGA <svg class="tk-ic" viewBox="0 0 24 24"><circle cx="7.2" cy="12" r="4.1"/><path d="M11.3 12H21M17.6 12v3.2M20.2 12v2.3"/></svg> <i>from PRODUCE 101 JAPAN to the world</i> <span class="star">✦</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SCHEDULE ================= -->
+<section class="section schedule" id="schedule">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="sec-eyebrow">02 — SCHEDULE</p>
+      <h2 class="sec-title">スケジュール<span class="sec-en">upcoming days</span></h2>
+      <p class="sec-sub">亮賀くんの公式スケジュールと、ファン活動の予定・締切をひと目で。</p>
+      <span class="sec-ghost" aria-hidden="true">02</span>
+    </div>
+
+    <!-- 公式とファン活動を2分割で同時表示 -->
+    <div class="sch-grid">
+
+      <!-- ▼▼ 公式スケジュール（2026-07更新の確定情報。追加・変更はここを編集） ▼▼ -->
+      <div class="sch-col">
+        <div class="sch-col-head rv">
+          <span class="en-tag">OFFICIAL</span>
+          <h3>公式スケジュール</h3>
+          <span class="cnt">06</span>
+        </div>
+        <ul data-stagger>
+          <li class="sch-month rv">2026 / 08 — AUGUST</li>
+          <li class="sch-item rv">
+            <div class="sch-date">08.14<small>FRI</small></div>
+            <span class="sch-tag tag-event">EVENT</span>
+            <div class="sch-body"><h4>KCON LA 2026 DAY1</h4><p class="sch-note">アメリカ・ロサンゼルス</p></div>
+          </li>
+          <li class="sch-item rv">
+            <div class="sch-date">08.21<small>FRI</small></div>
+            <span class="sch-tag tag-live">LIVE</span>
+            <div class="sch-body"><h4>TOYOTA ARENA TOKYO</h4><p class="sch-note">開場17:30 / 開演18:30</p></div>
+          </li>
+          <li class="sch-item rv">
+            <div class="sch-date">08.22<small class="sat">SAT</small></div>
+            <span class="sch-tag tag-live">LIVE</span>
+            <div class="sch-body"><h4>TOYOTA ARENA TOKYO</h4><p class="sch-note">昼公演 開場12:30 / 開演13:30<br>夜公演 開場17:30 / 開演18:30</p></div>
+          </li>
+          <li class="sch-item rv">
+            <div class="sch-date">08.23<small class="sun">SUN</small></div>
+            <span class="sch-tag tag-live">LIVE</span>
+            <div class="sch-body"><h4>TOYOTA ARENA TOKYO</h4><p class="sch-note">開場14:00 / 開演15:00</p></div>
+          </li>
+          <li class="sch-month rv">2026 / 09 — SEPTEMBER</li>
+          <li class="sch-item rv">
+            <div class="sch-date">09.09<small>WED</small></div>
+            <span class="sch-tag tag-live">LIVE</span>
+            <div class="sch-body"><h4>神戸ワールド記念ホール</h4><p class="sch-note">昼公演 開場12:30 / 開演13:30<br>夜公演 開場17:30 / 開演18:30</p></div>
+          </li>
+          <li class="sch-item rv">
+            <div class="sch-date">09.10<small>THU</small></div>
+            <span class="sch-tag tag-live">LIVE</span>
+            <div class="sch-body"><h4>神戸ワールド記念ホール</h4><p class="sch-note">昼公演 開場12:30 / 開演13:30<br>夜公演 開場17:30 / 開演18:30</p></div>
+          </li>
+        </ul>
+        <p class="sch-caption">※ 最新・正確な情報は必ず公式SNS・公式サイトをご確認ください。</p>
+      </div>
+
+      <!-- ▼▼ ファン活動スケジュール（サンプル） ▼▼ -->
+      <div class="sch-col">
+        <div class="sch-col-head rv">
+          <span class="en-tag">FAN ACTION</span>
+          <h3>ファン活動</h3>
+          <span class="cnt">03</span>
+        </div>
+        <ul data-stagger>
+          <li class="sch-month rv">2026 / 07 — JULY</li>
+          <li class="sch-item rv">
+            <div class="sch-date">07.20<small>MON</small></div>
+            <span class="sch-tag tag-vote">VOTE</span>
+            <div class="sch-body"><h4>センイル広告 投票期間スタート（例）</h4><p class="sch-note">対象アプリと手順は「センイル投票」へ</p></div>
+          </li>
+          <li class="sch-item rv">
+            <div class="sch-date">07.25<small class="sat">SAT</small></div>
+            <span class="sch-tag tag-fanwork">FAN WORK</span>
+            <div class="sch-body"><h4>ストリーミング企画 締切（例）</h4><p class="sch-note">参加報告はハッシュタグでシェア</p></div>
+          </li>
+          <li class="sch-month rv">2026 / 08 — AUGUST</li>
+          <li class="sch-item rv">
+            <div class="sch-date">08.10<small>MON</small></div>
+            <span class="sch-tag tag-vote">VOTE</span>
+            <div class="sch-body"><h4>音楽番組 事前投票 締切（例）</h4><p class="sch-note">リマインドはXで配信します</p></div>
+          </li>
+        </ul>
+        <p class="sch-caption">※ ファン活動の詳細・変更は りょがサポX（@FD_RYOGA_JP）で随時お知らせします。</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= BIRTHDAY VOTE ================= -->
+<section class="section birthday-sec" id="birthday">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="sec-eyebrow">03 — BIRTHDAY PROJECT</p>
+      <h2 class="sec-title"><em>センイル</em>投票<span class="sec-en">birthday votes</span></h2>
+      <p class="sec-sub">誕生日広告（センイル広告）を実現するまでの流れはこの3ステップ。対象アプリはこの下の索引から。</p>
+      <span class="sec-ghost" aria-hidden="true">03</span>
+    </div>
+
+    <div class="flow rv">
+      <div class="flow-step">
+        <div class="flow-node">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.5-9C1 8.5 3 5 6.5 5c2.2 0 4 1.4 5.5 3 1.5-1.6 3.3-3 5.5-3C21 5 23 8.5 21.5 12c-2 4.4-9.5 9-9.5 9z"/><path d="M12 8v5M9.5 10.5h5"/></svg>
+        </div>
+        <div class="flow-body">
+          <span class="flow-no">01</span>
+          <h4>貯める<span class="fe">charge</span></h4>
+          <p>対象アプリで投票ポイントを毎日コツコツ。無料ぶんだけでもちゃんと力になります。</p>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-node">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="10" width="18" height="10" rx="2"/><path d="M3 13h18M12 10V4m0 0l-3 3m3-3l3 3"/></svg>
+        </div>
+        <div class="flow-body">
+          <span class="flow-no">02</span>
+          <h4>投票する<span class="fe">vote</span></h4>
+          <p>投票期間に入ったら、貯めたぶんを亮賀くんへ集中投下。締切はXでリマインドします。</p>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-node">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="11" rx="1.5"/><path d="M9 21h6M12 15v6M12 8l.9 1.8 2 .3-1.45 1.4.35 2-1.8-.95-1.8.95.35-2L9.1 10.1l2-.3L12 8z"/></svg>
+        </div>
+        <div class="flow-body">
+          <span class="flow-no">03</span>
+          <h4>街に出る<span class="fe">on air</span></h4>
+          <p>投票で勝ち取ったセンイル広告が、駅や大型ビジョンに。実績はギャラリーに記録します。</p>
+        </div>
+      </div>
+    </div>
+    <p class="week-caption caption-pull rv">※ 流れは一般的なセンイル投票のイメージです。企画の詳細は確定後に更新します。</p>
+
+    <!-- ▼▼ アプリ索引（アプリ名・内容は仮。確定分に差し替えてください） ▼▼ -->
+    <div>
+      <div class="list-head rv">
+        <h3>対象アプリ索引</h3>
+        <span class="lh-en">APP INDEX — 04</span>
+      </div>
+      <ul data-stagger>
+        <li class="app-row rv">
+          <span class="ar-logo jp lt-a" aria-hidden="true">最</span>
+          <div class="ar-main">
+            <h4>最愛アイドル<small>（例）</small></h4>
+            <p class="ar-meta">DAILY VOTE / AD REWARD</p>
+          </div>
+          <p class="ar-desc">毎日の投票で広告掲載を目指すタイプ。ミッションでハートを貯めて投票します。</p>
+          <a class="circ" href="birthday.html#app-saiai" aria-label="最愛アイドルのガイドへ"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </li>
+        <li class="app-row rv">
+          <span class="ar-logo lt-b" aria-hidden="true">IC</span>
+          <div class="ar-main">
+            <h4>IDOL CHAMP<small>（例）</small></h4>
+            <p class="ar-meta">MISSION / CHART VOTE</p>
+          </div>
+          <p class="ar-desc">ミッション消化型の定番アプリ。チャミシルを集めて投票に使います。</p>
+          <a class="circ" href="birthday.html#app-idolchamp" aria-label="IDOL CHAMPのガイドへ"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </li>
+        <li class="app-row rv">
+          <span class="ar-logo lt-c" aria-hidden="true">Po</span>
+          <div class="ar-main">
+            <h4>Podoal<small>（例）</small></h4>
+            <p class="ar-meta">GRAPE VOTE / BIG AD</p>
+          </div>
+          <p class="ar-desc">大型ビジョン広告も狙えるアプリ。ぶどうを収穫してセンイル投票へ。</p>
+          <a class="circ" href="birthday.html#app-podoal" aria-label="Podoalのガイドへ"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </li>
+        <li class="app-row rv">
+          <span class="ar-logo lt-a" aria-hidden="true">U</span>
+          <div class="ar-main">
+            <h4>UPICK<small>（例）</small></h4>
+            <p class="ar-meta">PICK &amp; SUPPORT</p>
+          </div>
+          <p class="ar-desc">推しをPICKして応援するタイプ。イベント時の集中投票が鍵になります。</p>
+          <a class="circ" href="birthday.html#app-upick" aria-label="UPICKのガイドへ"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </li>
+      </ul>
+      <div class="list-foot rv">
+        <p class="note">※ ラインナップは仮置きです。KO1KEYZの対象アプリが確定したら入れ替えます。</p>
+        <a class="btn btn-primary" href="birthday.html">
+          センイル投票ガイドを開く
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INTERLUDE（写真のみのビジュアルバンド） ================= -->
+<section class="interlude">
+  <div class="wrap interlude-inner">
+    <div class="interlude-photo rv">
+      <img class="cut" src="../assets/ryoga-03-cut.png" srcset="../assets/ryoga-03-cut-sm.png 800w, ../assets/ryoga-03-cut.png 1200w" sizes="(max-width:960px) 86vw, 440px" width="900" height="1200" alt="KO1KEYZ 飯塚亮賀 公式アーティスト写真（全身）" loading="lazy">
+      <span class="il-tag" aria-hidden="true">KO1KEYZ — IIZUKA RYOGA</span>
+      <span class="ball-fab" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.2"/><path class="pent" d="M12 8.1l3.9 2.8-1.5 4.6H9.6l-1.5-4.6z"/><path d="M12 2.8v5.3M20.8 9.5l-4.9 1.4M17.3 19.9l-2.9-4.4M6.7 19.9l2.9-4.4M3.2 9.5l4.9 1.4"/></svg>
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MUSIC SHOW VOTE（ダークステージ） ================= -->
+<section class="section vote-sec dark" id="vote">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="sec-eyebrow">04 — MUSIC SHOW</p>
+      <h2 class="sec-title">音楽番組の<em>集票</em><span class="sec-en">chart actions</span></h2>
+      <p class="sec-sub">カムバ期間の1週間はだいたいこのリズム。アプリ別の詳しい手順はガイドページへ。</p>
+      <span class="sec-ghost" aria-hidden="true">04</span>
+    </div>
+
+    <!-- ▼▼ 1週間の動き方（例：番組確定後に曜日・内容を差し替え） ▼▼ -->
+    <div class="week-scroll rv">
+      <div class="week" role="img" aria-label="カムバ期間の1週間の動き方（例）。月曜から水曜は事前投票、木曜は放送日、ストリーミングは毎日。">
+        <div class="week-head">
+          <span class="cell">WEEK</span>
+          <span class="cell">MON</span><span class="cell">TUE</span><span class="cell">WED</span>
+          <span class="cell hl">THU</span>
+          <span class="cell">FRI</span><span class="cell">SAT</span><span class="cell">SUN</span>
+        </div>
+        <div class="week-row">
+          <span class="wlab">投票</span>
+          <div class="wtrack"><span class="wbar wbar-vote">事前投票期間（例）</span></div>
+        </div>
+        <div class="week-row">
+          <span class="wlab">放送</span>
+          <div class="wtrack"><span class="wbar wbar-onair">ON AIR</span></div>
+        </div>
+        <div class="week-row">
+          <span class="wlab">再生</span>
+          <div class="wtrack"><span class="wbar wbar-stream">ストリーミングは毎日</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="week-caption caption-pull rv">※ 曜日・番組は仮のイメージです。対象番組が確定したら差し替えます。</p>
+
+    <!-- ▼▼ アプリ索引（番組・アプリは仮。活動に合わせて差し替え） ▼▼ -->
+    <div>
+      <div class="list-head rv">
+        <h3>集票アプリ索引</h3>
+        <span class="lh-en">APP INDEX — 04</span>
+      </div>
+      <ul data-stagger>
+        <li class="app-row rv">
+          <span class="ar-logo lt-b" aria-hidden="true">M+</span>
+          <div class="ar-main">
+            <h4>Mnet Plus<small>（例）</small></h4>
+            <p class="ar-meta">M COUNTDOWN 事前投票</p>
+          </div>
+          <p class="ar-desc">エムカの事前投票はここから。投票期間は毎週決まっているので見逃さずに。</p>
+          <a class="circ" href="voting.html#app-mnetplus" aria-label="Mnet Plusのガイドへ"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </li>
+        <li class="app-row rv">
+          <span class="ar-logo lt-a" aria-hidden="true">Mu</span>
+          <div class="ar-main">
+            <h4>Mubeat<small>（例）</small></h4>
+            <p class="ar-meta">SHOW CHAMPION ほか</p>
+          </div>
+          <p class="ar-desc">ビッツを貯めて番組投票に参加。広告視聴でコツコツ貯めるのが基本です。</p>
+          <a class="circ" href="voting.html#app-mubeat" aria-label="Mubeatのガイドへ"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </li>
+        <li class="app-row rv">
+          <span class="ar-logo lt-c" aria-hidden="true">SP</span>
+          <div class="ar-main">
+            <h4>STAR PLANET<small>（例）</small></h4>
+            <p class="ar-meta">THE SHOW 事前投票</p>
+          </div>
+          <p class="ar-desc">ザショの投票アプリ。ジェリーを集めてラウンドごとの投票に参加します。</p>
+          <a class="circ" href="voting.html#app-starplanet" aria-label="STAR PLANETのガイドへ"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </li>
+        <li class="app-row rv">
+          <span class="ar-logo lt-a" aria-hidden="true">♪</span>
+          <div class="ar-main">
+            <h4>ストリーミング<small>（例）</small></h4>
+            <p class="ar-meta">SPOTIFY / APPLE MUSIC / YT</p>
+          </div>
+          <p class="ar-desc">チャート反映の土台はストリーミング。再生ルールはガイドにまとめています。</p>
+          <a class="circ" href="voting.html#app-streaming" aria-label="ストリーミングのガイドへ"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </li>
+      </ul>
+      <div class="list-foot rv">
+        <p class="note">※ 対象番組・アプリはKO1KEYZの活動が確定したら入れ替えます。</p>
+        <a class="btn" href="voting.html">
+          集票ガイドを開く
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="section gallery" id="gallery">
+  <div class="wrap">
+    <div class="gal-head-row">
+      <div class="sec-head rv">
+        <p class="sec-eyebrow">05 — SUPPORT AD ARCHIVE</p>
+        <h2 class="sec-title">応援広告<em>アーカイブ</em><span class="sec-en">made by fans</span></h2>
+        <p class="sec-sub">みんなの支援で実現してきた応援広告の記録。</p>
+      </div>
+      <p class="gal-hint rv" aria-hidden="true">DRAG / SCROLL</p>
+    </div>
+
+    <!-- ▼▼ 写真が用意でき次第、.shot 内の .ph を <img src="ads/xx.jpg" alt="説明"> に差し替え ▼▼ -->
+    <div class="gal-wrap">
+      <div class="gal-fade" aria-hidden="true"></div>
+      <div class="gal-rail" id="galrail" data-stagger>
+        <article class="frame rv">
+          <div class="shot"><span class="ph">PHOTO COMING SOON</span></div>
+          <p class="cap"><span class="fno">AD_01</span><span class="ft">応援広告 #01（例）</span></p>
+          <p class="cap-sub"><span class="era">PRODUCE 101 JAPAN 新世界</span>掲載場所・期間をここに記載</p>
+        </article>
+        <article class="frame rv">
+          <div class="shot"><span class="ph">PHOTO COMING SOON</span></div>
+          <p class="cap"><span class="fno">AD_02</span><span class="ft">応援広告 #02（例）</span></p>
+          <p class="cap-sub"><span class="era">PRODUCE 101 JAPAN 新世界</span>掲載場所・期間をここに記載</p>
+        </article>
+        <article class="frame rv">
+          <div class="shot"><span class="ph">PHOTO COMING SOON</span></div>
+          <p class="cap"><span class="fno">AD_03</span><span class="ft">デビュー応援広告（例）</span></p>
+          <p class="cap-sub"><span class="era">DEBUT ERA</span>掲載場所・期間をここに記載</p>
+        </article>
+        <article class="frame rv">
+          <div class="shot"><span class="ph">NEXT PROJECT</span></div>
+          <p class="cap"><span class="fno">AD_04</span><span class="ft">次の応援広告はあなたと</span></p>
+          <p class="cap-sub"><span class="era">COMING NEXT</span>企画情報はXでお知らせします</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="section about" id="about">
+  <div class="wrap about-inner">
+    <div class="about-photo rv">
+      <div class="about-circle" aria-hidden="true"></div>
+      <img class="cut" src="../assets/ryoga-01-cut.png" srcset="../assets/ryoga-01-cut-sm.png 800w, ../assets/ryoga-01-cut.png 1200w" sizes="(max-width:960px) 88vw, 330px" width="900" height="1200" alt="KO1KEYZ 飯塚亮賀 公式アーティスト写真（クローズアップ）" loading="lazy">
+      <p class="nameplate"><span class="np-jp">飯塚亮賀</span><img class="np-logo" src="../assets/ko1keyz-logo.png" alt="KO1KEYZ"></p>
+      <span class="badge">SINCE PRODUCE 101</span>
+      <p class="ph-caption" aria-hidden="true">OFFICIAL ARTIST PHOTO — KO1KEYZ</p>
+    </div>
+    <div class="about-body rv">
+      <div class="sec-head">
+        <p class="sec-eyebrow">06 — ABOUT US</p>
+        <h2 class="sec-title"><em>りょがサポ</em>について<span class="sec-en">about us</span></h2>
+      </div>
+      <p class="about-quote">for Ryoga, by fans —</p>
+      <p>「りょがサポ」は、KO1KEYZの<strong>飯塚亮賀</strong>くんを応援する有志ファンダムです。PRODUCE 101 JAPAN 新世界での応援活動からスタートし、デビュー後の今は、投票・集票・応援広告などのファン活動をつなぐ情報ハブとして運営しています。</p>
+      <p>初めての人も、ずっと応援してきた人も。<strong class="mk">迷ったらまずこのサイト</strong>を見れば、今なにをすればいいかがわかる——そんな場所を目指しています。</p>
+      <div class="about-note">
+        <b>ご注意：</b>当サイトは非公式のファンサイトです。所属事務所・公式とは一切関係ありません。掲載している本人写真は公式提供素材のみを使用しています。最新・正確な情報は必ず公式発表をご確認ください。
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <a class="totop" href="#top" aria-label="ページの先頭へ戻る">
+    <svg class="tt-ring" viewBox="0 0 80 80" aria-hidden="true">
+      <defs><path id="ttp" d="M40,40 m-29,0 a29,29 0 1,1 58,0 a29,29 0 1,1 -58,0"/></defs>
+      <text><textPath href="#ttp">BACK TO TOP&#160;&#160;·&#160;&#160;BACK TO TOP&#160;&#160;·&#160;&#160;</textPath></text>
+    </svg>
+    <svg class="tt-arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+  </a>
+  <div class="ticker rev" aria-hidden="true">
+    <div class="ticker-track">
+      <span>SEE YOU AT THE NEXT STAGE <span class="star">✦</span> <i>keep streaming, keep voting</i> <span class="star">✦</span> RYOGA SUPPORT <span class="star">✦</span> りょがサポ <span class="star">✦</span></span><span>SEE YOU AT THE NEXT STAGE <span class="star">✦</span> <i>keep streaming, keep voting</i> <span class="star">✦</span> RYOGA SUPPORT <span class="star">✦</span> りょがサポ <span class="star">✦</span></span>
+    </div>
+  </div>
+  <p class="foot-giant" aria-hidden="true">RYOGA SUPPORT</p>
+  <div class="wrap foot-inner">
+    <div class="foot-brand">
+      <p class="mark"><span class="lg-top">RYOGA</span><span class="lg-sub">Support</span></p>
+      <p>KO1KEYZ・飯塚亮賀くんを応援する有志ファンダム「りょがサポ」の情報サイトです。</p>
+      <span class="foot-logo"><img src="../assets/ko1keyz-logo.png" alt="KO1KEYZ 公式ロゴ"></span>
+    </div>
+    <nav class="foot-nav" aria-label="フッターナビゲーション">
+      <div>
+        <h5>MENU</h5>
+        <a href="#now">今日のりょがサポ</a>
+        <a href="#schedule">スケジュール</a>
+        <a href="#birthday">センイル投票</a>
+        <a href="#vote">音楽番組の集票</a>
+        <a href="#gallery">応援広告アーカイブ</a>
+      </div>
+      <div>
+        <h5>GUIDE</h5>
+        <a href="birthday.html">センイル投票ガイド</a>
+        <a href="voting.html">集票ガイド</a>
+      </div>
+      <div>
+        <h5>SNS</h5>
+        <a href="https://x.com/FD_RYOGA_JP" target="_blank" rel="noopener">X（@FD_RYOGA_JP）</a>
+      </div>
+    </nav>
+  </div>
+  <div class="wrap foot-bottom">
+    <p>© <span id="yy"></span> RYOGA SUPPORT — Unofficial fan site.</p>
+    <span class="fb-key" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="7.2" cy="12" r="4.1"/><path d="M11.3 12H21M17.6 12v3.2M20.2 12v2.3"/></svg></span>
+    <p>当サイトは非公式ファンサイトです / 画像は公式提供素材を使用</p>
+  </div>
+</footer>
+
+<script>
+// ---------- モバイルメニュー ----------
+const menuBtn=document.querySelector('.menu-btn');
+menuBtn.addEventListener('click',()=>{
+  const open=document.body.classList.toggle('menu-open');
+  menuBtn.setAttribute('aria-expanded',open?'true':'false');
+});
+document.querySelectorAll('.sheet a').forEach(a=>{
+  a.addEventListener('click',()=>{
+    document.body.classList.remove('menu-open');
+    menuBtn.setAttribute('aria-expanded','false');
+  });
+});
+
+// ---------- スクロールリビール（リスト内はカスケード） ----------
+document.querySelectorAll('[data-stagger]').forEach(box=>{
+  box.querySelectorAll('.rv').forEach((el,i)=>{
+    el.dataset.delay=Math.min(i*70,420);
+  });
+});
+const io=new IntersectionObserver(es=>{
+  es.forEach(e=>{
+    if(!e.isIntersecting)return;
+    const el=e.target, d=parseInt(el.dataset.delay||'0',10);
+    el.style.transitionDelay=d+'ms';
+    el.classList.add('in');
+    io.unobserve(el);
+    // フロー図・週間表の子アニメーション（最長約1.4秒）が終わってからクラスを外す
+    setTimeout(()=>{el.classList.remove('rv','in');el.style.transitionDelay='';},d+1700);
+  });
+},{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+// ---------- ナビのスクロールスパイ ----------
+const spyLinks=[...document.querySelectorAll('.gnav a[href^="#"]')];
+if('IntersectionObserver' in window && spyLinks.length){
+  const spy=new IntersectionObserver(es=>{
+    es.forEach(e=>{
+      if(!e.isIntersecting)return;
+      spyLinks.forEach(a=>a.classList.toggle('cur',a.getAttribute('href')==='#'+e.target.id));
+    });
+  },{rootMargin:'-38% 0px -55% 0px'});
+  ['now','schedule','birthday','vote','gallery','about'].forEach(id=>{
+    const s=document.getElementById(id); if(s)spy.observe(s);
+  });
+}
+
+// ---------- 東京時刻HUD ----------
+const jst=document.getElementById('jst');
+if(jst){
+  const fmt=new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Tokyo',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false});
+  const tick=()=>{jst.textContent=fmt.format(new Date());};
+  tick();setInterval(tick,1000);
+}
+
+// ---------- カーソルフォロワー ----------
+(()=>{
+  if(!matchMedia('(pointer:fine)').matches)return;
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  const dot=document.querySelector('.cur-dot'),ring=document.querySelector('.cur-ring');
+  if(!dot||!ring)return;
+  let mx=0,my=0,dx=0,dy=0,rx=0,ry=0,seen=false;
+  addEventListener('mousemove',e=>{
+    mx=e.clientX;my=e.clientY;
+    if(!seen){seen=true;dx=rx=mx;dy=ry=my;dot.classList.add('live');ring.classList.add('live');}
+  },{passive:true});
+  addEventListener('mouseover',e=>{
+    ring.classList.toggle('on',!!e.target.closest('a,button,[role="tab"]'));
+  },{passive:true});
+  const loop=()=>{
+    dx+=(mx-dx)*.4; dy+=(my-dy)*.4;
+    rx+=(mx-rx)*.14; ry+=(my-ry)*.14;
+    if(seen){
+      dot.style.transform='translate3d('+(dx-3)+'px,'+(dy-3)+'px,0)';
+      ring.style.transform='translate3d('+(rx-ring.offsetWidth/2)+'px,'+(ry-ring.offsetHeight/2)+'px,0)';
+    }
+    requestAnimationFrame(loop);
+  };
+  loop();
+})();
+
+// ---------- ギャラリー：ドラッグスクロール＋端フェード ----------
+(()=>{
+  const rail=document.getElementById('galrail');
+  if(!rail)return;
+  const wrap=rail.closest('.gal-wrap');
+  const updateFade=()=>{
+    wrap.classList.toggle('end',rail.scrollLeft+rail.clientWidth>=rail.scrollWidth-8);
+  };
+  rail.addEventListener('scroll',updateFade,{passive:true});
+  updateFade();
+  let down=false,sx=0,sl=0;
+  rail.addEventListener('pointerdown',e=>{
+    if(e.pointerType!=='mouse')return;
+    down=true;sx=e.clientX;sl=rail.scrollLeft;
+    rail.classList.add('dragging');rail.setPointerCapture(e.pointerId);
+  });
+  rail.addEventListener('pointermove',e=>{
+    if(!down)return;
+    rail.scrollLeft=sl-(e.clientX-sx);
+  });
+  ['pointerup','pointercancel'].forEach(ev=>rail.addEventListener(ev,()=>{
+    down=false;rail.classList.remove('dragging');
+  }));
+})();
+
+// ---------- 年号 ----------
+document.getElementById('yy').textContent=new Date().getFullYear();
+
+// ---------- フォント監視（ローカル確認時のみ表示。公開サイトでは出ない） ----------
+(()=>{
+  if(!['localhost','127.0.0.1'].includes(location.hostname))return;
+  /* Typekit(JS)は非同期ロードなので、しばらくリトライしてから初めて警告を出す */
+  let tries=0;
+  const test=()=>{
+    const c=document.createElement('canvas').getContext('2d');
+    const w=(f,t)=>{c.font=f;return c.measureText(t).width;};
+    /* 注意: 和文グリフは全角一律幅のため判定に使えない。ラテン字で測ること */
+    const base=w('700 40px monospace','RYOGA 19');
+    const fams=[
+      ['obviously-wide','Obviously Wide（ロゴ・FV）'],
+      ['obviously','Obviously（数字・チッカー）'],
+      ['neue-haas-grotesk-display','Neue Haas（小ラベル）'],
+      ['fot-tsukubrdgothic-std','筑紫B丸（和文見出し）']
+    ];
+    const miss=fams.filter(f=>w('700 40px "'+f[0]+'", monospace','RYOGA 19')===base).map(f=>f[1]);
+    const old=document.getElementById('fontwarn');
+    if(!miss.length){if(old)old.remove();return;}
+    if(tries<4){tries++;setTimeout(test,2000);return;}
+    if(old)return;
+    const b=document.createElement('div');
+    b.id='fontwarn';
+    b.style.cssText='position:fixed;left:12px;right:12px;bottom:12px;z-index:4000;background:#121C42;color:#fff;font:12px/1.7 "Zen Kaku Gothic New",sans-serif;padding:12px 44px 12px 16px;border-radius:12px;opacity:.96';
+    b.innerHTML='Adobe Fonts未読込: '+miss.join(' / ')+'（代替フォントで表示中）。Webプロジェクトへの追加漏れか広告ブロッカーを確認。※この帯はローカル確認時のみ表示されます';
+    const x=document.createElement('button');
+    x.textContent='×';
+    x.setAttribute('aria-label','閉じる');
+    x.style.cssText='position:absolute;right:10px;top:8px;background:none;border:0;color:#fff;font-size:18px;cursor:pointer';
+    x.addEventListener('click',()=>b.remove());
+    b.appendChild(x);
+    document.body.appendChild(b);
+  };
+  if(document.fonts&&document.fonts.ready){document.fonts.ready.then(()=>setTimeout(test,1500));}
+})();
+</script>
+<div style="position:fixed;left:14px;bottom:14px;z-index:5000;background:#121C42;color:#fff;font:700 11px/1 sans-serif;letter-spacing:.12em;padding:10px 16px;border-radius:999px;opacity:.92;pointer-events:none">STAGING — フル版保管用</div>
+</body>
+</html>
