@@ -663,6 +663,59 @@ a.chip:hover{color:var(--cobalt);background:#fff;translate:-1px -1px;box-shadow:
 .daily-cell p{font-size:11px;color:var(--ink-soft);line-height:1.5}
 .board-note{margin-top:16px;font-size:11.5px;color:var(--ink-soft)}
 
+/* ---------- 期間限定の告知（data-until を過ぎるとJSで非表示） ---------- */
+[data-until][hidden],.sch-empty[hidden]{display:none!important}
+.notice-sec{
+  position:relative;padding:72px 0 88px;
+  background:
+    radial-gradient(760px 420px at 90% 10%, rgba(255,216,77,.16), transparent 58%),
+    radial-gradient(640px 400px at 6% 90%, rgba(159,176,246,.26), transparent 60%),
+    #fff;
+  border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);
+}
+.notice-inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:48px 64px;align-items:center}
+.notice-tag{
+  display:inline-block;font-family:var(--font-en);font-weight:700;font-size:10px;letter-spacing:.26em;
+  color:#B26E00;background:#FFF6DC;border:1.5px solid rgba(178,110,0,.55);border-radius:999px;
+  padding:6px 14px;box-shadow:3px 3px 0 rgba(178,110,0,.22);transform:rotate(-2deg);
+}
+.notice-title{
+  margin-top:20px;font-family:var(--font-disp);font-weight:700;font-feature-settings:"palt" 1;
+  font-size:clamp(26px,4vw,42px);line-height:1.3;letter-spacing:.02em;
+  word-break:keep-all;overflow-wrap:anywhere;
+}
+.notice-title em{font-style:normal;color:var(--cobalt)}
+.notice-en{display:block;margin-top:8px;font-family:var(--font-en);font-weight:700;font-size:10.5px;letter-spacing:.38em;color:var(--cobalt)}
+.notice-lead{margin-top:20px;font-size:14px;color:var(--ink-soft);line-height:2}
+.notice-period{
+  margin-top:20px;display:inline-flex;align-items:baseline;gap:14px;
+  border:1.5px solid var(--ink);border-radius:12px;background:#fff;padding:12px 18px;
+  box-shadow:4px 4px 0 var(--sky-soft);
+}
+.notice-period .np-lb{font-family:var(--font-en);font-weight:700;font-size:9.5px;letter-spacing:.24em;color:var(--ink-soft)}
+.notice-period .val{font-family:var(--font-en);font-weight:700;font-size:24px;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.notice-period .val small{font-size:11px;letter-spacing:.14em;color:var(--ink-soft);margin-left:6px}
+.notice-cta{margin-top:26px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+
+.notice-shots{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+.notice-shots .frame{flex:none;padding:10px 10px 12px}
+.notice-shots .frame .shot{aspect-ratio:4/5;cursor:zoom-in;background:#fff}
+.notice-shots .frame .shot img{object-fit:contain} /* 告知画像は文字が主役なので切らずに全体を見せる */
+.notice-shots .frame:nth-child(1){transform:rotate(-1.6deg)}
+.notice-shots .frame:nth-child(2){transform:rotate(1.4deg) translateY(18px)}
+.notice-shots .frame:hover{transform:rotate(0) translateY(-4px)}
+.notice-shots .frame .cap{margin-top:10px}
+@media (max-width:960px){
+  .notice-inner{grid-template-columns:1fr;gap:40px}
+  .notice-sec{padding:60px 0 72px}
+}
+@media (max-width:640px){
+  .notice-shots{gap:14px}
+  .notice-shots .frame{padding:8px 8px 10px}
+  .notice-shots .frame:nth-child(2){transform:rotate(1.4deg) translateY(10px)}
+  .notice-cta .btn{width:100%;justify-content:center}
+}
+
 /* ---------- schedule ---------- */
 .schedule{background:var(--mist)}
 /* 公式／ファン活動はタブではなく2分割で同時に見せる */
@@ -716,6 +769,14 @@ a.chip:hover{color:var(--cobalt);background:#fff;translate:-1px -1px;box-shadow:
 .tag-fanwork{color:#0E7A96;border-color:rgba(14,122,150,.5)}
 .sch-item h4{font-size:14px;font-weight:900;font-feature-settings:"palt" 1;letter-spacing:.02em}
 .sch-item .sch-note{font-size:11.5px;color:var(--ink-soft);font-weight:500;margin-top:2px}
+/* ファン活動：予定なしの空状態 */
+.sch-empty{
+  text-align:center;padding:40px 16px 38px;
+  border:1.5px dashed rgba(18,28,66,.3);border-radius:var(--r-l);
+  background:rgba(255,255,255,.5);margin-top:16px;
+}
+.sch-empty-en{font-family:var(--font-en);font-weight:700;font-size:10px;letter-spacing:.3em;color:var(--sky-deep)}
+.sch-empty p{margin-top:12px;font-size:12.5px;color:var(--ink-soft);line-height:1.9}
 /* ファン活動：期間表示＋行全体がリンク */
 a.sch-item{color:inherit;text-decoration:none}
 a.sch-item h4{transition:color .25s}
@@ -1385,6 +1446,40 @@ button.shot:focus-visible{outline:2.5px solid var(--cobalt);outline-offset:3px}
   </div>
 </section>
 
+<!-- ================= 期間限定：デビューお祝い広告 サポート募集 =================
+     data-until="YYYY-MM-DDTHH:MM" はJST。この日時以降は自動で非表示になる（JSの「期限つき要素の自動非表示」参照）。
+     期間が変わったら data-until と表示文言（notice-period / lead）を両方直す。
+     終了後にセクションごと消してよい（staging不要）。 -->
+<section class="notice-sec" id="notice" data-until="2026-08-19T00:00">
+  <div class="wrap notice-inner">
+    <div class="notice-text rv">
+      <span class="notice-tag">DEBUT CELEBRATION AD</span>
+      <h2 class="notice-title">飯塚亮賀くん<br>デビューお祝い広告<wbr>プロジェクト<br><em>サポート募集中！</em><span class="notice-en">support wanted</span></h2>
+      <p class="notice-lead">デビューをお祝いする応援広告を、みんなの力で実現します。<br>詳しい内容・参加方法は下のリンクからご確認ください。</p>
+      <p class="notice-period"><span class="np-lb">募集期間</span><span class="val">8.12<small>TUE</small> → 8.18<small>MON</small></span></p>
+      <div class="notice-cta">
+        <a class="btn btn-primary" href="https://t.co/5HNiQccO2O" target="_blank" rel="noopener">詳細はこちら<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+    <div class="notice-shots" data-stagger>
+      <article class="frame rv">
+        <button class="shot" type="button" data-full="assets/support/debut-ad-01-web.jpg" data-cap="デビューお祝い広告プロジェクト（募集期間 8/12〜8/18）" data-cap-en="DEBUT CELEBRATION AD / 01" aria-label="拡大表示：デビューお祝い広告プロジェクトの案内">
+          <img src="assets/support/debut-ad-01-web.jpg" alt="飯塚亮賀くんデビューお祝い広告プロジェクトの案内画像" loading="lazy">
+          <span class="zoom-ic" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/><path d="M8 10.5h5M10.5 8v5"/></svg></span>
+        </button>
+        <p class="cap"><span class="fno">01</span><span class="ft">プロジェクト概要</span></p>
+      </article>
+      <article class="frame rv">
+        <button class="shot" type="button" data-full="assets/support/debut-ad-02-web.jpg" data-cap="デビューお祝い広告プロジェクト 詳細（募集期間 8/12〜8/18）" data-cap-en="DEBUT CELEBRATION AD / 02" aria-label="拡大表示：デビューお祝い広告プロジェクトの詳細">
+          <img src="assets/support/debut-ad-02-web.jpg" alt="飯塚亮賀くんデビューお祝い広告プロジェクトの詳細画像" loading="lazy">
+          <span class="zoom-ic" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/><path d="M8 10.5h5M10.5 8v5"/></svg></span>
+        </button>
+        <p class="cap"><span class="fno">02</span><span class="ft">詳細・参加方法</span></p>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- ================= SCHEDULE ================= -->
 <section class="section schedule" id="schedule">
   <div class="wrap">
@@ -1403,15 +1498,10 @@ button.shot:focus-visible{outline:2.5px solid var(--cobalt);outline-offset:3px}
         <div class="sch-col-head rv">
           <span class="en-tag">OFFICIAL</span>
           <h3>公式スケジュール</h3>
-          <span class="cnt">06</span>
+          <span class="cnt">09</span>
         </div>
         <ul data-stagger>
           <li class="sch-month rv">2026 / 08 — AUGUST</li>
-          <li class="sch-item rv">
-            <div class="sch-date">08.14<small>FRI</small></div>
-            <span class="sch-tag tag-event">EVENT</span>
-            <div class="sch-body"><h4>KCON LA 2026 DAY1</h4><p class="sch-note">アメリカ・ロサンゼルス</p></div>
-          </li>
           <li class="sch-item rv">
             <div class="sch-date">08.21<small>FRI</small></div>
             <span class="sch-tag tag-live">LIVE</span>
@@ -1438,6 +1528,26 @@ button.shot:focus-visible{outline:2.5px solid var(--cobalt);outline-offset:3px}
             <span class="sch-tag tag-live">LIVE</span>
             <div class="sch-body"><h4>神戸ワールド記念ホール</h4><p class="sch-note">昼公演 開場12:30 / 開演13:30<br>夜公演 開場17:30 / 開演18:30</p></div>
           </li>
+          <li class="sch-item rv">
+            <div class="sch-date">09.19<small class="sat">SAT</small></div>
+            <span class="sch-tag tag-live">LIVE</span>
+            <div class="sch-body"><h4>マイナビ TGC 2026 A/W</h4><p class="sch-note">横浜アリーナ<br>開場12:00 / 開演14:00 / 終演21:00（予定）</p></div>
+          </li>
+          <li class="sch-item rv">
+            <div class="sch-date">09.24<small>THU</small></div>
+            <span class="sch-tag tag-media">MAGAZINE</span>
+            <div class="sch-body"><h4>ViVi 2026年11/12月号</h4><p class="sch-note">表紙＆インタビュー</p></div>
+          </li>
+          <li class="sch-item rv">
+            <div class="sch-date">09.24<small>THU</small></div>
+            <span class="sch-tag tag-media">MAGAZINE</span>
+            <div class="sch-body"><h4>月刊ザテレビジョン KO1KEYZ 限定Ver.</h4><p class="sch-note">表紙＆インタビュー</p></div>
+          </li>
+          <li class="sch-item rv">
+            <div class="sch-date">09.26<small class="sat">SAT</small></div>
+            <span class="sch-tag tag-live">LIVE</span>
+            <div class="sch-body"><h4>Rakuten GirlsAward 2026 AUTUMN/WINTER</h4><p class="sch-note">幕張メッセ国際展示場 1-3ホール<br>開場13:00 / 開演14:30</p></div>
+          </li>
         </ul>
         <p class="sch-caption">※ 最新・正確な情報は必ず公式SNS・公式サイトをご確認ください。</p>
       </div>
@@ -1447,10 +1557,39 @@ button.shot:focus-visible{outline:2.5px solid var(--cobalt);outline-offset:3px}
         <div class="sch-col-head rv">
           <span class="en-tag">FAN ACTION</span>
           <h3>ファン活動</h3>
-          <span class="cnt">01</span>
+          <span class="cnt" id="fan-cnt">01</span>
         </div>
+        <!-- ▼ ファン活動の行は data-until="YYYY-MM-DDTHH:MM"（JST）を付けると期限を過ぎた時点で自動非表示。
+             全行が非表示になると下の .sch-empty が自動で出て .cnt が 00 になる（JS「期限つき要素の自動非表示」）。
+             月見出し li.sch-month にも同じ data-until を付けておくと一緒に消える。 -->
+        <ul data-stagger id="fan-list">
+          <li class="sch-month rv" data-until="2026-08-19T00:00">2026 / 08 — AUGUST</li>
+          <li class="rv" data-until="2026-08-19T00:00">
+            <a class="sch-item" href="https://t.co/5HNiQccO2O" target="_blank" rel="noopener">
+              <div class="sch-date sch-period">08.12<small>→ 08.18 MON</small></div>
+              <span class="sch-tag tag-fanwork">SUPPORT</span>
+              <div class="sch-body">
+                <h4>デビューお祝い広告プロジェクト サポート募集</h4>
+                <p class="sch-note">募集期間：8/12〜8/18<span class="sch-open">TAP FOR DETAILS</span></p>
               </div>
             </a>
+          </li>
+          <!-- ▼ 投票企画を追加するときの雛形（コピーしてコメントを外す。li は .rv のみ・行全体をリンクに）
+          <li class="sch-month rv" data-until="2026-07-15T00:00">2026 / 07 — JULY</li>
+          <li class="rv" data-until="2026-07-15T00:00">
+            <a class="sch-item" href="投票ページのURL" target="_blank" rel="noopener">
+              <div class="sch-date sch-period">07.01<small>→ 07.14 TUE</small></div>
+              <span class="sch-tag tag-vote">VOTE</span>
+              <div class="sch-body">
+                <h4><img class="app-ic" src="assets/idolchamp.png" alt="IDOL CHAMP" width="22" height="22">企画名</h4>
+                <p class="sch-note">IDOL CHAMPで投票<span class="sch-open">TAP TO VOTE</span></p>
+              </div>
+            </a>
+          </li>
+          -->
+          <li class="sch-empty rv" id="fan-empty" hidden>
+            <span class="sch-empty-en">NO ACTIVE PROJECT</span>
+            <p>現在進行中のファン活動はありません。<br>次の投票・企画が決まりしだい、ここに掲載します。</p>
           </li>
         </ul>
         <p class="sch-caption">※ ファン活動の詳細・変更は りょがサポX（@FD_RYOGA_JP）で随時お知らせします。</p>
@@ -1687,6 +1826,38 @@ button.shot:focus-visible{outline:2.5px solid var(--cobalt);outline-offset:3px}
 </div>
 
 <script>
+// ---------- 期限つき要素の自動非表示（data-until はJST） ----------
+// 例: <section data-until="2026-08-19T00:00"> → 日本時間 2026/8/19 0:00 以降は消える。
+// 閲覧者の端末タイムゾーンに関係なくJST基準で判定する。ページを開いたままでも期限を跨げば消える。
+(()=>{
+  const JST_OFFSET=9*60; // 分
+  const parseJST=s=>{
+    const m=/^(\d{4})-(\d{2})-(\d{2})(?:T(\d{2}):(\d{2}))?$/.exec((s||'').trim());
+    if(!m)return NaN;
+    // 指定日時をUTCとして作り、JST分だけ引く＝そのJST時刻の本当のUTC
+    return Date.UTC(+m[1],+m[2]-1,+m[3],+(m[4]||0),+(m[5]||0))-JST_OFFSET*60*1000;
+  };
+  const els=[...document.querySelectorAll('[data-until]')];
+  if(!els.length)return;
+  const apply=()=>{
+    const now=Date.now();
+    els.forEach(el=>{
+      const t=parseJST(el.dataset.until);
+      if(!isNaN(t)&&now>=t){el.hidden=true;el.setAttribute('aria-hidden','true');}
+    });
+    /* ファン活動：可視の行数を数えて件数バッジ・空カードを更新 */
+    const list=document.getElementById('fan-list');
+    if(list){
+      const rows=[...list.querySelectorAll(':scope > li')].filter(li=>!li.hidden&&!li.classList.contains('sch-month')&&!li.classList.contains('sch-empty'));
+      const cnt=document.getElementById('fan-cnt'), empty=document.getElementById('fan-empty');
+      if(cnt)cnt.textContent=String(rows.length).padStart(2,'0');
+      if(empty)empty.hidden=rows.length>0;
+    }
+  };
+  apply();
+  setInterval(apply,60*1000);
+})();
+
 // ---------- モバイルメニュー ----------
 const menuBtn=document.querySelector('.menu-btn');
 menuBtn.addEventListener('click',()=>{
