@@ -802,6 +802,120 @@ a.sch-item:hover h4{color:var(--cobalt)}
     var(--paper);
   border-top:1.5px solid var(--ink);
 }
+
+/* ---------- アプリガイド（最愛ドル） ---------- */
+.gd-app{
+  display:grid;grid-template-columns:auto 1fr auto;gap:22px 28px;align-items:center;
+  background:#fff;border:1.5px solid var(--ink);border-radius:var(--r-l);
+  padding:26px 30px;box-shadow:6px 6px 0 var(--sky-soft);
+}
+.gd-app .ic{width:76px;height:76px;border-radius:20px;object-fit:cover;border:1.5px solid rgba(18,28,66,.35);box-shadow:3px 3px 0 rgba(159,176,246,.6)}
+.gd-app .name{font-family:var(--font-disp);font-weight:700;font-size:26px;letter-spacing:.02em;font-feature-settings:"palt" 1;line-height:1.2}
+.gd-app .name small{display:block;font-family:var(--font-en);font-weight:700;font-size:9.5px;letter-spacing:.32em;color:var(--cobalt);margin-top:6px}
+.gd-app .desc{margin-top:12px;font-size:13.5px;line-height:1.95;color:var(--ink-soft)}
+.gd-app .desc b{color:var(--ink)}
+.gd-dl{display:flex;flex-direction:column;gap:10px;min-width:180px}
+.gd-dl .btn{padding:11px 18px;font-size:12px;justify-content:center;gap:8px}
+.gd-dl .btn svg{width:15px;height:15px;fill:currentColor;stroke:none}
+.gd-dl .btn:hover svg{transform:none}
+.gd-h{display:flex;align-items:baseline;gap:14px;margin:60px 0 24px;padding-bottom:12px;border-bottom:1.5px solid var(--ink)}
+.gd-h .no{font-family:var(--font-popw);font-weight:700;font-size:13px;color:var(--cobalt);letter-spacing:.04em}
+.gd-h h3{font-family:var(--font-disp);font-weight:700;font-size:clamp(20px,2.6vw,25px);letter-spacing:.02em;font-feature-settings:"palt" 1}
+.gd-h .en{margin-left:auto;font-family:var(--font-en);font-weight:700;font-size:9.5px;letter-spacing:.3em;color:var(--ink-soft);white-space:nowrap}
+.gd-cards{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.gd-card{
+  position:relative;background:#fff;border:1.5px solid rgba(18,28,66,.8);border-radius:var(--r-l);
+  padding:26px 26px 24px;box-shadow:4px 4px 0 var(--sky-soft);
+}
+.gd-card.main{border-color:var(--ink);box-shadow:5px 5px 0 rgba(255,216,77,.75)}
+.gd-card .tag{
+  position:absolute;top:-13px;left:22px;font-family:var(--font-en);font-weight:700;font-size:9.5px;letter-spacing:.24em;
+  background:#fff;border:1.5px solid var(--ink);border-radius:999px;padding:5px 12px;transform:rotate(-2deg);
+}
+.gd-card.main .tag{background:var(--spark)}
+.gd-card h4{font-family:var(--font-disp);font-weight:700;font-size:19px;letter-spacing:.02em;font-feature-settings:"palt" 1;margin-top:4px}
+.gd-card h4 small{font-family:var(--font-en);font-weight:700;font-size:9px;letter-spacing:.24em;color:var(--cobalt);margin-left:10px}
+.gd-card p{margin-top:12px;font-size:13px;line-height:1.95;color:var(--ink-soft)}
+.gd-card p b{color:var(--ink)}
+.gd-cond{margin-top:16px;padding:14px 16px;border-radius:14px;background:var(--mist);border:1px dashed rgba(18,28,66,.3);font-size:12.5px;line-height:1.9}
+.gd-cond .lb2{display:block;font-family:var(--font-en);font-weight:700;font-size:9px;letter-spacing:.26em;color:var(--cobalt);margin-bottom:4px}
+.gd-cond .num{font-family:var(--font-en);font-weight:700;font-size:20px;letter-spacing:-.01em;color:var(--ink);font-variant-numeric:tabular-nums}
+.gd-intro{display:grid;grid-template-columns:auto 1fr;gap:18px 26px;align-items:center;margin-bottom:26px}
+.gd-eq{
+  font-family:var(--font-popw);font-weight:700;font-size:clamp(20px,3vw,30px);letter-spacing:.02em;
+  background:#fff;border:1.5px solid var(--ink);border-radius:999px;padding:12px 26px;box-shadow:4px 4px 0 var(--sky-deep);white-space:nowrap;
+}
+.gd-eq em{font-style:normal;color:var(--cobalt)}
+.gd-types{display:flex;flex-wrap:wrap;gap:10px 22px;font-size:13px;line-height:1.9;color:var(--ink-soft)}
+.gd-types b{color:var(--ink)}
+.gd-types .pill{display:inline-block;font-family:var(--font-en);font-weight:700;font-size:9.5px;letter-spacing:.2em;border:1.5px solid;border-radius:999px;padding:3px 10px;margin-right:8px;vertical-align:1px}
+.gd-types .pill-ever{color:#B26E00;border-color:rgba(178,110,0,.5);background:rgba(255,216,77,.22)}
+.gd-types .pill-daily{color:var(--cobalt);border-color:rgba(58,79,208,.5)}
+.gd-two{display:grid;grid-template-columns:1.25fr .75fr;gap:34px 46px;align-items:start;margin-top:8px}
+.gd-two + .gd-two{margin-top:44px;padding-top:40px;border-top:1px dashed rgba(18,28,66,.25)}
+.gd-two h5{font-family:var(--font-disp);font-weight:700;font-size:17px;letter-spacing:.02em;font-feature-settings:"palt" 1;display:flex;align-items:center;gap:10px}
+.gd-two h5 .ic{width:24px;height:24px;border-radius:7px;vertical-align:middle;border:1px solid rgba(18,28,66,.25)}
+.gd-two h5 .sub{font-family:var(--font-en);font-weight:700;font-size:9px;letter-spacing:.24em;color:var(--cobalt)}
+.gd-list{margin-top:14px;border-top:1px solid var(--line)}
+.gd-list li{display:grid;grid-template-columns:1fr auto;gap:8px 20px;align-items:baseline;padding:12px 4px;border-bottom:1px solid var(--line);font-size:13px;line-height:1.75}
+.gd-list li.head{grid-template-columns:1fr;padding:12px 4px 4px;font-family:var(--font-en);font-weight:700;font-size:9.5px;letter-spacing:.24em;color:var(--ink-soft);border-bottom:0}
+.gd-list li small{display:block;font-size:11px;color:var(--ink-soft);margin-top:2px}
+.gd-list .h{font-family:var(--font-en);font-weight:700;font-size:15px;letter-spacing:-.01em;white-space:nowrap;font-variant-numeric:tabular-nums}
+.gd-list .h.h-ever{color:#B26E00}
+.gd-list .h.h-daily{color:var(--cobalt)}
+.gd-list .h i{display:inline;font-style:normal;font-family:var(--font-en);font-size:9px;letter-spacing:.16em;margin-left:5px;vertical-align:2px}
+.gd-warn{margin-top:14px;padding:12px 16px;border-radius:12px;background:#FFF6DC;border:1.5px dashed rgba(178,110,0,.5);font-size:12.5px;line-height:1.85;color:#6E4A00}
+.gd-fig{position:relative;justify-self:center;width:min(250px,100%)}
+.gd-fig .shot{
+  display:block;width:100%;aspect-ratio:9/16;border-radius:22px;overflow:hidden;position:relative;background:#fff;
+  border:1.5px solid var(--ink);box-shadow:6px 6px 0 var(--sky-soft);cursor:zoom-in;padding:0;
+}
+.gd-fig .shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;pointer-events:none}
+.gd-fig .cap{margin-top:12px;font-family:var(--font-en);font-weight:700;font-size:9.5px;letter-spacing:.24em;color:var(--ink-soft);text-align:center}
+.gd-fig:nth-of-type(odd){rotate:-1.2deg}
+.gd-invite{
+  margin-top:44px;display:grid;grid-template-columns:1fr auto;gap:22px 40px;align-items:center;
+  background:var(--ink);color:#fff;border-radius:var(--r-l);padding:28px 32px;
+  box-shadow:6px 6px 0 var(--sky-deep);
+}
+.gd-invite h5{font-family:var(--font-disp);font-weight:700;font-size:19px;letter-spacing:.02em;font-feature-settings:"palt" 1}
+.gd-invite h5 small{display:block;font-family:var(--font-en);font-weight:700;font-size:9px;letter-spacing:.3em;color:var(--sky);margin-top:6px}
+.gd-invite p{margin-top:12px;font-size:13px;line-height:1.9;color:rgba(255,255,255,.8)}
+.gd-invite p b{color:#fff}
+.gd-code{display:flex;align-items:center;gap:0;background:#fff;border-radius:16px;padding:6px 6px 6px 22px;border:1.5px solid #fff;box-shadow:4px 4px 0 var(--sky)}
+.gd-code .cd{font-family:var(--font-popw);font-weight:700;font-size:clamp(20px,3vw,28px);letter-spacing:.08em;color:var(--ink);font-variant-numeric:tabular-nums;padding-right:18px}
+.gd-code button{
+  white-space:nowrap;font:700 12px/1 var(--font-jp);letter-spacing:.06em;color:#fff;background:var(--cobalt);border:0;border-radius:11px;
+  padding:14px 18px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:background .25s,transform .12s;
+}
+.gd-code button svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.gd-code button:hover{background:var(--ink)}
+.gd-code button:active{transform:scale(.97)}
+.gd-code button.done{background:#0E8F6E}
+.gd-foot{margin-top:40px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:center}
+.gd-foot .lbl{width:100%;text-align:center;font-family:var(--font-en);font-weight:700;font-size:9.5px;letter-spacing:.3em;color:var(--ink-soft);margin-bottom:4px}
+@media (max-width:960px){
+  .gd-app{grid-template-columns:auto 1fr;padding:22px}
+  .gd-dl{grid-column:1/-1;flex-direction:row;flex-wrap:wrap}
+  .gd-dl .btn{flex:1 1 160px}
+  .gd-cards{grid-template-columns:1fr}
+  .gd-two{grid-template-columns:1fr}
+  .gd-fig{justify-self:start;width:min(230px,70%)}
+  .gd-invite{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .gd-app{grid-template-columns:1fr;gap:14px}
+  .gd-app .ic{width:64px;height:64px}
+  .gd-eq{font-size:20px;padding:10px 20px}
+  .gd-intro{grid-template-columns:1fr}
+  .gd-h{flex-wrap:wrap;gap:8px 12px}
+  .gd-h .en{margin-left:0;width:100%}
+  .gd-invite{padding:22px 20px}
+  .gd-code{padding:6px 6px 6px 16px}
+  .gd-code .cd{font-size:20px;letter-spacing:.06em;padding-right:10px}
+  .gd-code button{padding:12px 14px}
+  .gd-foot .btn{width:100%;justify-content:center}
+}
 .flow{
   position:relative;
   display:grid;grid-template-columns:repeat(3,1fr);
@@ -1008,6 +1122,9 @@ a.sch-item:hover h4{color:var(--cobalt)}
 
 /* ---------- gallery ---------- */
 .gallery{background:var(--mist);border-bottom:1px solid var(--line)}
+/* #vote を閉じている間はギャラリーがインタールードの写真を受ける（角丸で上に重なる）。#vote復活時はこの3行を消す */
+.gallery.after-interlude{position:relative;z-index:2;margin-top:-56px;border-radius:48px 48px 0 0;padding-top:170px;border-top:1.5px solid var(--ink)}
+@media (max-width:960px){.gallery.after-interlude{margin-top:-44px;padding-top:130px;border-radius:32px 32px 0 0}}
 .gal-head-row{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
 .gal-head-row .sec-head{margin-bottom:0}
 .gal-hint{
@@ -1352,7 +1469,6 @@ button.shot:focus-visible{outline:2.5px solid var(--cobalt);outline-offset:3px}
   <nav class="gnav" aria-label="グローバルナビゲーション">
     <a href="#schedule"><span class="rl"><span class="rt" data-l="Schedule">Schedule</span></span></a>
     <a href="#birthday"><span class="rl"><span class="rt" data-l="Birthday">Birthday</span></span></a>
-    <a href="#vote"><span class="rl"><span class="rt" data-l="Vote">Vote</span></span></a>
     <a href="#gallery"><span class="rl"><span class="rt" data-l="Gallery">Gallery</span></span></a>
     <a href="#about"><span class="rl"><span class="rt" data-l="About">About</span></span></a>
     <a class="nav-x" href="https://x.com/FD_RYOGA_JP" target="_blank" rel="noopener">
@@ -1370,9 +1486,8 @@ button.shot:focus-visible{outline:2.5px solid var(--cobalt);outline-offset:3px}
   <nav class="sheet-nav" aria-label="モバイルナビゲーション">
     <a href="#schedule"><span class="no">01</span><span class="t">スケジュール</span><span class="e">schedule</span></a>
     <a href="#birthday"><span class="no">02</span><span class="t">センイル投票</span><span class="e">birthday</span></a>
-    <a href="#vote"><span class="no">03</span><span class="t">音楽番組の集票</span><span class="e">vote</span></a>
-    <a href="#gallery"><span class="no">04</span><span class="t">応援広告アーカイブ</span><span class="e">gallery</span></a>
-    <a href="#about"><span class="no">05</span><span class="t">りょがサポについて</span><span class="e">about</span></a>
+    <a href="#gallery"><span class="no">03</span><span class="t">応援広告アーカイブ</span><span class="e">gallery</span></a>
+    <a href="#about"><span class="no">04</span><span class="t">りょがサポについて</span><span class="e">about</span></a>
   </nav>
   <a class="sheet-x" href="https://x.com/FD_RYOGA_JP" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-4.9-6.4L6.4 22H3.2l7.3-8.3L1 2h6.5l4.4 5.9L18.9 2zm-1.1 18h1.7L7.6 3.9H5.8L17.8 20z"/></svg>
@@ -1605,21 +1720,123 @@ button.shot:focus-visible{outline:2.5px solid var(--cobalt);outline-offset:3px}
     <div class="sec-head rv">
       <p class="sec-eyebrow">02 — BIRTHDAY PROJECT</p>
       <h2 class="sec-title"><em>センイル</em>投票<span class="sec-en">birthday votes</span></h2>
-      <p class="sec-sub">誕生日投票関連の情報はこちら！</p>
+      <p class="sec-sub">誕生日投票関連の情報はこちら！ まずは「最愛ドル」で毎日コツコツ、ハートを集めよう。</p>
       <span class="sec-ghost" aria-hidden="true">02</span>
     </div>
 
-    <!-- ▼▼ 企画解禁までCOMING SOON表示（フル版は staging/index.html に保管） ▼▼ -->
-    <div class="soon-card rv">
-      <span class="soon-tag">BIRTHDAY PROJECT — IN PREP</span>
-      <p class="soon-en" aria-hidden="true">COMING SOON</p>
-      <p class="soon-jp">現在準備中です。<br>対象アプリ・投票期間・参加手順は、確定次第ここで公開します。</p>
-      <div class="soon-cta">
-        <a class="btn btn-primary" href="https://x.com/FD_RYOGA_JP" target="_blank" rel="noopener">
-          最新情報はXでお知らせ
-          <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
+    <!-- ▼▼ 最愛ドル（Choeaedol）ガイド ▼▼ -->
+    <div class="gd-app rv" id="choeaedol">
+      <img class="ic" src="assets/choeaedol.webp" alt="最愛ドル アプリアイコン" width="76" height="76">
+      <div>
+        <p class="name">最愛ドル<small>CHOEAEDOL — 最愛ドルとは？</small></p>
+        <p class="desc">アプリ内で投票を行うことで、<b>亮賀くんの名前で寄付や広告を掲出</b>することができるアプリです！<br>主に誕生日の<b>寄付妖精</b>を目指して、毎日コツコツハート集めを頑張りましょう♫</p>
       </div>
+      <div class="gd-dl">
+        <a class="btn btn-primary" href="https://apps.apple.com/jp/app/%E6%9C%80%E6%84%9B%E3%83%89%E3%83%AB-k-pop-%E9%9F%93%E5%9B%BD-%E3%82%A2%E3%82%A4%E3%83%89%E3%83%AB%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0-%E6%8A%95%E7%A5%A8/id1131995698" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.5 2-3.7 2.1-3.8-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.2 2.5-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9-.1 0-2.9-1.1-2.9-4.1zM13.9 5.2c.7-.8 1.2-2 1-3.2-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1.1 3.1 1.1.1 2.3-.6 3-1.4z"/></svg>App Store</a>
+        <a class="btn" href="https://play.google.com/store/apps/details?id=net.ib.mn&pcampaignid=web_share" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.3c-.3.3-.4.7-.4 1.2v17c0 .5.1.9.4 1.2l.1.1 9.5-9.5v-.2L3.7 2.2l-.1.1z"/><path d="M16.4 15.4l-3.2-3.2v-.2l3.2-3.2.1.1 3.8 2.1c1.1.6 1.1 1.6 0 2.2l-3.8 2.1-.1.1z"/><path d="M16.5 15.3l-3.3-3.3-9.6 9.6c.4.4.9.4 1.6.1l11.3-6.4"/><path d="M16.5 8.7L5.2 2.3c-.7-.4-1.2-.3-1.6.1l9.6 9.6 3.3-3.3z"/></svg>Google Play</a>
+      </div>
+    </div>
+
+    <!-- できること -->
+    <div class="gd-h rv"><span class="no">01</span><h3>できること</h3><span class="en">what you can do</span></div>
+    <div class="gd-cards" data-stagger>
+      <article class="gd-card main rv">
+        <span class="tag">GOAL — まずはこれ！</span>
+        <h4>寄付妖精<small>DONATION FAIRY</small></h4>
+        <p>条件を達成すると、韓国の福祉財団に<b>亮賀くんの名前で50万ウォン</b>が寄付されます！<br>寄付証書は所属事務所まで発送されます！</p>
+        <div class="gd-cond"><span class="lb2">CONDITION — 達成条件</span>誕生日（<b>1/21</b>）、100日単位の記念日に投票数が<br><span class="num">55,555,555</span> 票以上を達成</div>
+      </article>
+      <article class="gd-card rv">
+        <span class="tag">MONTHLY</span>
+        <h4>今月の奇跡<small>MIRACLE OF THE MONTH</small></h4>
+        <p>その月に誕生日を迎えたアイドルの中で、対象期間に<b>1番得票数が多かったアイドル</b>が選ばれます。</p>
+        <div class="gd-cond"><span class="lb2">REWARD — 選ばれると</span>韓国の<b>「永登浦タイムズスクエア」</b>に応援広告が掲出されます！</div>
+      </article>
+    </div>
+
+    <!-- ハートの集め方 -->
+    <div class="gd-h rv"><span class="no">02</span><h3>ハートの集め方</h3><span class="en">how to collect hearts</span></div>
+    <div class="gd-intro rv">
+      <p class="gd-eq">1 <em>ハート</em> = 1 <em>票</em></p>
+      <div class="gd-types">
+        <span><span class="pill pill-ever">EVER</span><b>エバーハート</b>：無制限に保持される</span>
+        <span><span class="pill pill-daily">DAILY</span><b>デイリーハート</b>：獲得したその日に消滅</span>
+      </div>
+    </div>
+
+    <div class="gd-two rv">
+      <div>
+        <h5>基本報酬<span class="sub">DAILY BASICS</span></h5>
+        <ul class="gd-list">
+          <li><span>ログイン</span><span class="h h-daily">100<i>DAILY</i></span></li>
+          <li class="head">メニュー ＞ デイリースタンプ から</li>
+          <li><span>出席チェック<small>10日ログインで</small></span><span class="h h-daily">最大 1,000<i>DAILY</i></span></li>
+          <li><span>レベル報酬<small>レベルに応じて</small></span><span class="h h-daily">最大 400<i>DAILY</i></span></li>
+          <li><span>TEMU、AliExpress を開く<small>各アプリごと</small></span><span class="h h-daily">各 30<i>DAILY</i></span></li>
+          <li><span>推し活タイム<small>毎日 20:00〜23:30 にログイン！</small></span><span class="h h-daily">30<i>DAILY</i></span></li>
+        </ul>
+      </div>
+      <figure class="gd-fig">
+        <button class="shot" type="button" data-full="assets/votes/choeaedol/dailystamp-web.jpg" data-cap="メニュー ＞ デイリースタンプ の画面" data-cap-en="CHOEAEDOL / DAILY STAMP" aria-label="拡大表示：デイリースタンプ画面">
+          <img src="assets/votes/choeaedol/dailystamp-web.jpg" alt="最愛ドル デイリースタンプ画面の参考画像" loading="lazy">
+        </button>
+        <figcaption class="cap">DAILY STAMP — TAP TO ZOOM</figcaption>
+      </figure>
+    </div>
+
+    <div class="gd-two rv">
+      <div>
+        <h5>ハートボックス<span class="sub">HEART BOX</span></h5>
+        <ul class="gd-list">
+          <li><span>写真に表示される <img class="ic" src="assets/votes/choeaedol/boxicon.png" alt="ハートボックスのアイコン" width="24" height="24" style="display:inline-block;width:22px;height:22px;vertical-align:-6px;border-radius:6px;border:1px solid rgba(18,28,66,.25)"> をタップするたび<small>ランダムで獲得</small></span><span class="h h-daily">最大 1,000<i>DAILY</i></span></li>
+        </ul>
+        <h5 style="margin-top:30px">投票報酬<span class="sub">VOTE BONUS</span></h5>
+        <ul class="gd-list">
+          <li><span>100ハート以上投票</span><span class="h">10% 還元</span></li>
+          <li><span>自分の投稿が100ハート以上獲得</span><span class="h">さらに 10% 還元</span></li>
+        </ul>
+        <h5 style="margin-top:30px">その他<span class="sub">MORE</span></h5>
+        <ul class="gd-list">
+          <li><span>動画広告視聴<small>1視聴ごと</small></span><span class="h h-ever">50<i>EVER</i></span></li>
+          <li><span>無料ハートチャージから「最愛ドルスター」にログイン<small>毎日</small></span><span class="h h-ever">100<i>EVER</i></span></li>
+        </ul>
+      </div>
+      <figure class="gd-fig">
+        <button class="shot" type="button" data-full="assets/votes/choeaedol/heartbox-web.jpg" data-cap="ハートボックスが表示されている画面" data-cap-en="CHOEAEDOL / HEART BOX" aria-label="拡大表示：ハートボックスの画面">
+          <img src="assets/votes/choeaedol/heartbox-web.jpg" alt="最愛ドル ハートボックス画面の参考画像" loading="lazy">
+        </button>
+        <figcaption class="cap">HEART BOX — TAP TO ZOOM</figcaption>
+      </figure>
+    </div>
+
+    <div class="gd-two rv">
+      <div>
+        <h5>投稿報酬<span class="sub">POST REWARDS</span></h5>
+        <ul class="gd-list">
+          <li><span>20:00〜23:30 に投稿</span><span class="h h-ever">100<i>EVER</i></span></li>
+          <li><span>動画</span><span class="h h-ever">100<i>EVER</i></span></li>
+          <li><span>YouTube 動画URL 投稿</span><span class="h h-ever">50<i>EVER</i></span></li>
+          <li><span>正方形の写真投稿</span><span class="h h-ever">100<i>EVER</i></span></li>
+        </ul>
+        <p class="gd-warn">⚠️ 正方形写真はバナー扱いになるため、基本的に投稿は<b>「フリーサイズ」</b>でお願いします！</p>
+      </div>
+    </div>
+
+    <div class="gd-invite rv">
+        <div>
+          <h5>友達招待<small>INVITE — 招待コード</small></h5>
+          <p>会員登録時に招待コードを入力で<b>1,000エバーハート</b>！<br>招待した側も、招待人数に応じてエバーハートをGET！</p>
+        </div>
+        <div class="gd-code">
+          <span class="cd" id="invite-code">61281CAE</span>
+          <button type="button" id="copy-code" aria-label="招待コードをコピー"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a1 1 0 0 1 1-1h10"/></svg><span class="t">コピー</span></button>
+        </div>
+    </div>
+
+    <div class="gd-foot rv">
+      <span class="lbl">DOWNLOAD — アプリをダウンロード</span>
+      <a class="btn btn-primary" href="https://apps.apple.com/jp/app/%E6%9C%80%E6%84%9B%E3%83%89%E3%83%AB-k-pop-%E9%9F%93%E5%9B%BD-%E3%82%A2%E3%82%A4%E3%83%89%E3%83%AB%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0-%E6%8A%95%E7%A5%A8/id1131995698" target="_blank" rel="noopener">App Store（iOS）<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=net.ib.mn&pcampaignid=web_share" target="_blank" rel="noopener">Google Play（Android）<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </div>
 </section>
@@ -1638,7 +1855,7 @@ button.shot:focus-visible{outline:2.5px solid var(--cobalt);outline-offset:3px}
 </section>
 
 <!-- ================= MUSIC SHOW VOTE（ダークステージ） ================= -->
-<section class="section vote-sec dark" id="vote">
+<section class="section vote-sec dark" id="vote" hidden>
   <div class="wrap">
     <div class="sec-head rv">
       <p class="sec-eyebrow">03 — MUSIC SHOW</p>
@@ -1663,11 +1880,11 @@ button.shot:focus-visible{outline:2.5px solid var(--cobalt);outline-offset:3px}
 </section>
 
 <!-- ================= GALLERY ================= -->
-<section class="section gallery" id="gallery">
+<section class="section gallery after-interlude" id="gallery">
   <div class="wrap">
     <div class="gal-head-row">
       <div class="sec-head rv">
-        <p class="sec-eyebrow">04 — SUPPORT AD ARCHIVE</p>
+        <p class="sec-eyebrow">03 — SUPPORT AD ARCHIVE</p>
         <h2 class="sec-title">応援広告<em>アーカイブ</em><span class="sec-en">made by ryogasapo</span></h2>
         <p class="sec-sub">皆さまの支援で実現してきた応援広告の記録</p>
       </div>
@@ -1753,7 +1970,7 @@ button.shot:focus-visible{outline:2.5px solid var(--cobalt);outline-offset:3px}
     </div>
     <div class="about-body rv">
       <div class="sec-head">
-        <p class="sec-eyebrow">05 — ABOUT US</p>
+        <p class="sec-eyebrow">04 — ABOUT US</p>
         <h2 class="sec-title"><em>りょがサポ</em>について<span class="sec-en">about us</span></h2>
       </div>
       <p class="about-quote">for Ryoga, by fans —</p>
@@ -1792,14 +2009,13 @@ button.shot:focus-visible{outline:2.5px solid var(--cobalt);outline-offset:3px}
         <h5>MENU</h5>
         <a href="#schedule">スケジュール</a>
         <a href="#birthday">センイル投票</a>
-        <a href="#vote">音楽番組の集票</a>
         <a href="#gallery">応援広告アーカイブ</a>
         <a href="#about">りょがサポについて</a>
       </div>
       <div>
         <h5>GUIDE</h5>
         <!-- 企画解禁後、staging/index.html を参考にリンクを復活させる -->
-        <span class="fn-soon">センイル投票ガイド（準備中）</span>
+        <a href="#birthday">最愛ドル 投票ガイド</a>
         <span class="fn-soon">集票ガイド（準備中）</span>
       </div>
       <div>
@@ -1899,7 +2115,7 @@ if('IntersectionObserver' in window && spyLinks.length){
       spyLinks.forEach(a=>a.classList.toggle('cur',a.getAttribute('href')==='#'+e.target.id));
     });
   },{rootMargin:'-38% 0px -55% 0px'});
-  ['schedule','birthday','vote','gallery','about'].forEach(id=>{
+  ['schedule','birthday','gallery','about'].forEach(id=>{
     const s=document.getElementById(id); if(s)spy.observe(s);
   });
 }
@@ -2001,6 +2217,20 @@ if(jst){
   closeBtn.addEventListener('click',close);
   lb.querySelector('.lb-bg').addEventListener('click',close);
   addEventListener('keydown',e=>{if(e.key==='Escape'&&!lb.hidden)close();});
+})();
+
+// ---------- 招待コードのコピー ----------
+(()=>{
+  const btn=document.getElementById('copy-code'), code=document.getElementById('invite-code');
+  if(!btn||!code)return;
+  const label=btn.querySelector('.t');
+  const fallback=txt=>{const ta=document.createElement('textarea');ta.value=txt;ta.setAttribute('readonly','');ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}ta.remove();};
+  btn.addEventListener('click',async()=>{
+    const txt=code.textContent.trim();
+    try{ if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(txt);}else{fallback(txt);} }catch(e){fallback(txt);}
+    btn.classList.add('done');label.textContent='コピーしました';
+    setTimeout(()=>{btn.classList.remove('done');label.textContent='コピー';},1800);
+  });
 })();
 
 // ---------- 年号 ----------
